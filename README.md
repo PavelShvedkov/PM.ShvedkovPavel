@@ -14,13 +14,18 @@
 ### 18.09.2019 
 | Task | Task Status | Additional/Comments |
 | -------- | -------- | --------|  
-| 7 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task7](https://github.com/PavelShvedkov/Group-1-a.-Semester-1/blob/master/semester-1/PM.Shvedkov.18.09.2019/Task7.cpp)
-| 8 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task8](https://github.com/PavelShvedkov/Group-1-a.-Semester-1/blob/master/semester-1/PM.Shvedkov.18.09.2019/Task8.cpp)
-| 11 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task11d](https://github.com/PavelShvedkov/Group-1-a.-Semester-1/blob/master/semester-1/PM.Shvedkov.18.09.2019/Task11d.cpp)
-| 11 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task11g](https://github.com/PavelShvedkov/Group-1-a.-Semester-1/blob/master/semester-1/PM.Shvedkov.18.09.2019/Task11g.cpp)
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task 7(page 22) of "Сборник лабораторных работ с примерами решения задач по алгоритмизациии на языке С"](https://github.com/PavelShvedkov/Group-1-a.-Semester-1/blob/master/semester-1/PM.Shvedkov.18.09.2019/Task7.cpp)
+| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task 8(page 22) of "Сборник лабораторных работ с примерами решения задач по алгоритмизациии на языке С"](https://github.com/PavelShvedkov/Group-1-a.-Semester-1/blob/master/semester-1/PM.Shvedkov.18.09.2019/Task8.cpp)
+| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task11d(page 23) of "Сборник лабораторных работ с примерами решения задач по алгоритмизациии на языке С"](https://github.com/PavelShvedkov/Group-1-a.-Semester-1/blob/master/semester-1/PM.Shvedkov.18.09.2019/Task11d.cpp)
+| 4 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task11g(page 23) of "Сборник лабораторных работ с примерами решения задач по алгоритмизациии на языке С"](https://github.com/PavelShvedkov/Group-1-a.-Semester-1/blob/master/semester-1/PM.Shvedkov.18.09.2019/Task11g.cpp)
 
 
 
 ### 25.09.2019
 | Task | Task Status | Additional/Comments |
 | -------- | -------- | --------| 
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)
+| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)
+| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)
+| 4 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)
+
