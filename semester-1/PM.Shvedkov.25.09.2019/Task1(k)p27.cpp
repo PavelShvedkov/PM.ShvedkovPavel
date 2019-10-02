@@ -30,6 +30,7 @@ int main()
 			sum = sum + 1 / znam;
 			i = i + 1;
 		}
+		
 		cout << "Summ( " << n << " )= " << sum << endl;
 		system("pause");
 		system("cls");
@@ -37,5 +38,6 @@ int main()
 		cin >> ok;
 		system("cls");
 	}
+	
 	return 0;
 }
