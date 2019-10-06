@@ -29,6 +29,7 @@ int main()
 			i = i + 1;
 			k = -k;
 		}
+		
 		cout << "Summ( " << n << " )= " << sum << endl;
 		system("pause");
 		system("cls");
@@ -36,6 +37,7 @@ int main()
 		cin >> ok;
 		system("cls");
 	}
+	
 	system("cls");
 	return 0;
 }
