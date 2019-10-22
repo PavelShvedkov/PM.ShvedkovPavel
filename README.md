@@ -44,21 +44,21 @@
 ### 09.10.2019
 | Task | Task Status | Additional/Comments |
 | -------- | -------- | --------| 
-| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task1(Sample number)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.09.10.2019/Task1(samplenumber).cpp)
-| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task2(Polindrom check)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.09.10.2019/Task2(polinomialNumber).cpp)
-| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task3(Sequences)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.09.10.2019/Task3(Sequences).cpp)
-| 4 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task4(Digit replacement)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.09.10.2019/Task4(trancferNumber).cpp)
-| 5 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task5(Delete numbers)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.09.10.2019/Task5(deleteDigit).cpp)
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task1(Function "Prime number")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.09.10.2019/Task1(samplenumber).cpp)
+| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task2(Function "Polindrom check")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.09.10.2019/Task2(polinomialNumber).cpp)
+| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task3(Function "Sequences")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.09.10.2019/Task3(Sequences).cpp)
+| 4 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task4(Function "Digit replacement")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.09.10.2019/Task4(trancferNumber).cpp)
+| 5 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task5(Function "Delete numbers")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.09.10.2019/Task5(deleteDigit).cpp)
 
 
 
 ### 16.10.2019
 | Task | Task Status | Additional/Comments |
 | -------- | -------- | --------| 
-| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task1(Sample number)](/)
-| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task2(Polindrom check)](/)
-| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task3(Sequences)](/)
-| 4 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task4(Digit replacement)](/)
-| 5 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task5(Delete numbers)](/)
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task1(Program "Sample number")](/)
+| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task2(Program "Polindrom check")](/)
+| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task3(Program "Sequences")](/)
+| 4 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task4(Program "Digit replacement")](/)
+| 5 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task5(Program "Delete numbers")](/)
 
 
