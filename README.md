@@ -55,10 +55,10 @@
 ### 16.10.2019
 | Task | Task Status | Additional/Comments |
 | -------- | -------- | --------| 
-| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task1(Program "Sample number")](/)
-| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task2(Program "Polindrom check")](/)
-| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task3(Program "Sequences")](/)
-| 4 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task4(Program "Digit replacement")](/)
-| 5 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-target.png)|[Task5(Program "Delete numbers")](/)
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task1(Program "Sample number")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.16.10.2019/Task1Update.cpp)
+| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task2(Program "Polindrom check")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.16.10.2019/task2UP.cpp)
+| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task3(Program "Sequences")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.16.10.2019/Task3FullProgramUpgrade.cpp)
+| 4 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task4(Program "Digit replacement")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.16.10.2019/Task4UP.cpp)
+| 5 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task5(Program "Delete numbers")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.16.10.2019/upTask5.cpp)
 
 
