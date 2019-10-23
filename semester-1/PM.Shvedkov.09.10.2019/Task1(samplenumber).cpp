@@ -1,20 +1,17 @@
 bool sampleNumber(int number)
 {
-	bool check = true;
+	bool check = false;
 
 	number = abs(number);
 
 	for (int k = 2; k < number; k++)
 	{
-		if (number % k != 0)
+		if (number % k == 0)
 		{
-			continue;
+			return check;
 		}
-		else
-		{
-			check = false;
-			break;
-		}
+		
+			check = true;
 	}
 	return check;
 }
