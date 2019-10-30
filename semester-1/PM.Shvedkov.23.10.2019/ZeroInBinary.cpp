@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int unitsInBinary(int);
+int zerosInBinary(int);
 void testCase(int, int);
 void runtest();
 int enterNumber();
@@ -72,7 +72,7 @@ void workWithConsole()
 {
 	int number = enterNumber();
 
-	int counter = unitsInBinary(number);
+	int counter = zerosInBinary(number);
 
 	displayResult(counter);
 }
@@ -82,7 +82,7 @@ void displayResult(int counter)
 	cout << " Units in binary: " << counter << endl;
 }
 
-int unitsInBinary(int decimalNumber)
+int zerosInBinary(int decimalNumber)
 {
 	int counter = 0;
 
