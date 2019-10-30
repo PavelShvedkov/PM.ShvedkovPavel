@@ -62,3 +62,12 @@
 | 5 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task5(Program "Delete numbers")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.16.10.2019/upTask5.cpp)
 
 
+
+### 23.10.2019
+| Task | Task Status | Additional/Comments |
+| -------- | -------- | --------| 
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task1(Functoin "Units in Binary")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.23.10.2019/Task%201.cpp)
+| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task2(Function "Zeros in Binary")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.23.10.2019/Task%202.cpp)
+| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task3(Functoin"Hexadecimal Character")](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.23.10.2019/Task%203.cpp)
+
+
