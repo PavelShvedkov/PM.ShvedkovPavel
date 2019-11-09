@@ -10,12 +10,6 @@ void testCase(int,int , int , int , int , int , int , int , int , int , int );
 void runTests();
 void menu();
 
-
-int primeArray(int[], int)
-{
-	return 0;
-}
-
 int main()
 {
 		menu();
