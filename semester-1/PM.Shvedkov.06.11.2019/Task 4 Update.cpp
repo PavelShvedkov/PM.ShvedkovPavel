@@ -9,7 +9,7 @@ void generateRandomArray(int* array, int n);
 void initArray(int*, int);
 int  initSizeArray();
 void workWithConsole();
-void testCase(int, int, int, int, int, int, int, int, int);
+void testCase(int, int*, int*, int);
 void runTests();
 void menu();
 void menuText();
@@ -24,50 +24,63 @@ int main()
 
 void runTests()
 {
+	int const n = 5;
 	int testNr = 1;
 
-	int tArray1[5] = { 1, 2, 3, 4, 5 };
-	int tArray2[5] = { 5, 4, 3, 2, 1 };
-	int tArray3[5] = { 1, 2, 2, 3, 4 };
-	int tArray4[5] = { 5, 4, 4, 3, 1 };
-	int tArray5[5] = { 1, 1, 1, 1, 1 };
-	int tArray6[5] = { 1, 2, 2, 4, 1 };
+	int tArray1[n] = { 1, 2, 3, 4, 5 };
+	int tExpArray1[3] = { 4, 0, 0 };
+	testCase(testNr++, tArray1, tExpArray1, n);
 
-	testCase(testNr++, 1, 2, 3, 4, 5, 4, 0, 0);
-	testCase(testNr++, 5, 4, 3, 2, 1, 0, 4, 0);
-	testCase(testNr++, 1, 2, 2, 3, 4, 3, 0, 1);
-	testCase(testNr++, 5, 4, 4, 3, 1, 0, 3, 1);
-	testCase(testNr++, 1, 1, 1, 1, 1, 0, 0, 4);
-	testCase(testNr++, 1, 2, 2, 4, 1, 2, 1, 1);
+	int tArray2[n] = { 5, 4, 3, 2, 1 };
+	int tExpArray2[3] = { 0, 4, 0 };
+	testCase(testNr++, tArray2, tExpArray2, n);
+
+	int tArray3[n] = { 1, 2, 2, 3, 4 };
+	int tExpArray3[3] = { 3, 0, 1 };
+	testCase(testNr++, tArray3, tExpArray3, n);
+
+	int tArray4[n] = { 5, 4, 4, 3, 1 };
+	int tExpArray4[3] = { 0, 3, 1 };
+	testCase(testNr++, tArray4, tExpArray4, n);
+
+	int tArray5[n] = { 1, 1, 1, 1, 1 };
+	int tExpArray5[3] = { 0, 0, 4 };
+	testCase(testNr++, tArray5, tExpArray5, n);
+
+	int tArray6[n] = { 1, 2, 2, 4, 1 };
+	int tExpArray6[3] = { 2, 1, 1 };
+	testCase(testNr++, tArray6, tExpArray6, n);
 
 }
 
-void testCase(int testNr, int el1, int el2, int el3, int el4, int el5, int expel1, int expel2, int expel3)
+void testCase(int testNr, int* array, int* expArray, int n)
 {
-	int const n = 5;
-	int testArray[n];
-
-	testArray[0] = el1;
-	testArray[1] = el2;
-	testArray[2] = el3;
-	testArray[3] = el4;
-	testArray[4] = el5;
-
-	int expAnalysisArray[3];
-
-	expAnalysisArray[0] = expel1;
-	expAnalysisArray[1] = expel2;
-	expAnalysisArray[2] = expel3;
-
 	int analysisArray[3] = { 0 };
 
-	sequenceType(testArray, analysisArray, n);
+	for (int* pointer = array, i = 1; i < n; i++, pointer++)
+	{
+		if (*(pointer) < *(pointer + 1))
+		{
+			analysisArray[0]++;//ïåðâûé ìåíüøå âòîðîãî
+		}
+		else
+		{
+			if (*(pointer) > * (1 + pointer))
+			{
+				analysisArray[1]++;//ïåðâûé áîëüøå âòîðîãî
+			}
+			else
+			{
+				analysisArray[2]++;//ïåðâûé ðàâåí âòîðîìó
+			}
+		}
+	}
 
 	bool answer = 1;
 
-	for (int i = 0; i < n; i++)
+	for (int* pointerAnalysis = analysisArray; pointerAnalysis < analysisArray + 3; pointerAnalysis++, expArray++)
 	{
-		if (analysisArray[i] != expAnalysisArray[i])
+		if (*pointerAnalysis != *expArray)
 		{
 			answer = 0;
 			break;
@@ -116,7 +129,7 @@ void menu()
 void workWithConsole()
 {
 	int n = initSizeArray();
-	int* array=new int[n];
+	int* array = new int[n];
 
 	initArray(array, n);
 
@@ -149,15 +162,15 @@ int initSizeArray()
 
 void sequenceType(int* array, int analysisArray[], int n)
 {
-	for (int* pointer = array, i=1;i<n;i++, pointer++)
+	for (int* pointer = array, i = 1; i < n; i++, pointer++)
 	{
-		if (*(pointer) < *(pointer+1))
+		if (*(pointer) < *(pointer + 1))
 		{
 			analysisArray[0]++;//ïåðâûé ìåíüøå âòîðîãî
 		}
 		else
 		{
-			if (*(pointer) > *(1+pointer))
+			if (*(pointer) > * (1 + pointer))
 			{
 				analysisArray[1]++;//ïåðâûé áîëüøå âòîðîãî
 			}
@@ -218,7 +231,7 @@ short sequenceAnalisys(int analysisArray[])
 void generateRandomArray(int* array, int n)
 {
 	srand(time(0));
-	for (int* pointer = array; pointer < array+ n; pointer++)
+	for (int* pointer = array; pointer < array + n; pointer++)
 	{
 		*pointer = rand() % 10;
 	}

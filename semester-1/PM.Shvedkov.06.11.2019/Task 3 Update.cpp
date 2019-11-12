@@ -8,7 +8,7 @@ void generateNotDecreasingArray(int*, int);
 int enterNumber();
 void workWithConsole();
 void display(int*, int);
-void testCase(int, int, int, int, int, int, int, int);
+void testCase(int, int*, int, int,int);
 void runTests();
 void menu();
 void menuText();
@@ -33,16 +33,11 @@ void workWithConsole()
 	cout << " Numbers smaller than '" << digit << "' in array:"<< lessThanThis(array, n, digit)<<endl;
 }
 
-void testCase(int testNr, int el1, int el2, int el3, int el4, int el5, int digit, int expAnswer)
+void testCase(int testNr, int* array, int digit, int expAnswer, int n)
 {
-	int const n = 5;
-	int testArray[n];
+	int* testArray=array;
 
-	testArray[0] = el1;
-	testArray[1] = el2;
-	testArray[2] = el3;
-	testArray[3] = el4;
-	testArray[4] = el5;
+	
 
 	if (lessThanThis(testArray, n, digit) == expAnswer)
 	{
@@ -58,12 +53,22 @@ void testCase(int testNr, int el1, int el2, int el3, int el4, int el5, int digit
 void runTests()
 {
 	int testNumber = 1;
+	int const n = 5;
 
-	testCase(testNumber++, 23, 43, 53, 352, 31, 400, 5);
-	testCase(testNumber++, 224, 241, 124, 532, 132, 12, 0);
-	testCase(testNumber++, 63, 63, 63, 63, 43, 63, 1);
-	testCase(testNumber++, 124, 42, 12, 54, 132, 53, 2);
-	testCase(testNumber++, 12, 3, 123, 2, 1, 4, 3);
+	int tArray1[n] = { 23, 43, 53, 352, 31 };
+	testCase(testNumber++,tArray1,  400, 5,n);
+
+	int tArray2[n] = { 224, 241, 124, 532, 132 };
+	testCase(testNumber++, tArray2,  12, 0,n);
+
+	int tArray3[n] = { 63, 63, 63, 63, 43 };
+	testCase(testNumber++, tArray3, 63, 1,n);
+
+	int tArray4[n] = { 124, 42, 12, 54, 132 };
+	testCase(testNumber++, tArray4, 53, 2,n);
+
+	int tArray5[n] = { 12, 3, 123, 2, 1 };
+	testCase(testNumber++, tArray5, 4, 3,n);
 
 }
 

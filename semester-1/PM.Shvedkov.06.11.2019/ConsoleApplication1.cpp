@@ -109,9 +109,9 @@ void testCase(int testNumber, int* array, int* expArray, int n)
 
 	bool answer = 1;
 
-	for (int i = 0; i < n; invTestArray++, expArray++)
+	for (int* pointerInverted = invTestArray; pointerInverted < invTestArray+n; pointerInverted++, expArray++)
 	{
-		if (invTestArray != expArray)
+		if (*pointerInverted != *expArray)
 		{
 			answer = 0;
 			break;
@@ -134,30 +134,25 @@ void runTests()
 	int testNumber = 1;
 	int const n = 5;
 
-	int tArray[n] = { 1,2,3,4,5 };
-	int tExpArray[n] = { 5,4,3,2,1 };
-	int* array = tArray;
-	testCase(testNumber++, array, tExpArray, n);
+	int tArray1[n] = { 1,2,3,4,5 };
+	int tExpArray1[n] = { 5,4,3,2,1 };
+	testCase(testNumber++, tArray1, tExpArray1, n);
 
-	int tArray1[n] = { 0,0,0,1,1};
-	int tExpArray1[n] = { 1,1,0,0,0 };
-	array = tArray1;
-	testCase(testNumber++, array, tExpArray, n);
+	int tArray2[n] = { 0,0,0,1,1};
+	int tExpArray2[n] = { 1,1,0,0,0 };
+	testCase(testNumber++, tArray2, tExpArray2, n);
 
 	int tArray3[n] = { -3,5,74,325,1234 };
 	int tExpArray3[n] = { 1234,325,74,5,-3 };
-	array = tArray;
-	testCase(testNumber++, array, tExpArray, n);
+	testCase(testNumber++, tArray3, tExpArray3, n);
 
 	int tArray4[n] = { 1,1,1,1,1 };
 	int tExpArray4[n] = { 1,1,1,1,1 };
-	array = tArray;
-	testCase(testNumber++, array, tExpArray, n);
+	testCase(testNumber++, tArray4, tExpArray4, n);
 
 	int tArray5[n] = { 3,3,0,3,3 };
 	int tExpArray5[n] = { 3,3,0,3,3 };
-	array = tArray5;
-	testCase(testNumber++, array, tExpArray, n);
+	testCase(testNumber++, tArray5, tExpArray5, n);
 
 
 
