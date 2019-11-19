@@ -95,7 +95,7 @@
 ### 13.11.2019
 | Task | Task Status | Additional/Comments |
 | -------- | -------- | --------| 
-| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task1(Buble or swap sort)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.13.11.2019/Task%201(Buble%20or%20swap%20sort)/Task%201(Buble%20or%20swap%20sort).cpp)
-| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task2(Selection sort)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.13.11.2019/Task%202%20(Selection%20sort)/Task%202%20(Selection%20sort).cpp)
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task1(Buble or swap sort)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.13.11.2019/Task%201(Buble%20or%20swap%20sort))
+| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task2(Selection sort)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.13.11.2019/Task%202%20(Selection%20sort))
 | 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task3(Insertion sort)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-1/PM.Shvedkov.13.11.2019/Task%203%20(Insertion%20sort))
 
