@@ -136,27 +136,27 @@ void runTests()
 	int testNumber = 1;
 
 	countTests(testNumber++, -22222222, 7, 0, 0, 0, 0, 1);
-	countTests(testNumber++, 44444444, 7, 0, 0, 0, 0, 1); // тест с "монотонным" исходом
+	countTests(testNumber++, 44444444, 7, 0, 0, 0, 0, 1);
 	countTests(testNumber++, 00000000, 0, 0, 0, 0, 0, 1);
 
 	countTests(testNumber++, -12345678, 0, 0, 0, 7, 0, 3);
-	countTests(testNumber++, 23456, 0, 0, 0, 4, 0, 3);// тест со "строго возрастающим" исходом
+	countTests(testNumber++, 23456, 0, 0, 0, 4, 0, 3);
 	countTests(testNumber++, 123456789, 0, 0, 0, 8, 0, 3);
 
 	countTests(testNumber++, 987654321, 0, 0, 0, 0, 8, 2);
-	countTests(testNumber++, 876543, 0, 0, 0, 0, 5, 2); // тест со "строго убывающим" исходом
+	countTests(testNumber++, 876543, 0, 0, 0, 0, 5, 2); 
 	countTests(testNumber++, 987654, 0, 0, 0, 0, 5, 2);
 
 	countTests(testNumber++, 234458, 1, 1, 0, 3, 0, 5);
-	countTests(testNumber++, 123578, 0, 2, 0, 3, 0, 5); // тест с "возрастающим" исходом
+	countTests(testNumber++, 123578, 0, 2, 0, 3, 0, 5); 
 	countTests(testNumber++, -234458, 1, 1, 0, 3, 0, 5);
 
 	countTests(testNumber++, 99766430, 2, 0, 3, 0, 2, 4);
-	countTests(testNumber++, 76542, 0, 0, 1, 0, 3, 4);// тест с "убывающим" исходом
+	countTests(testNumber++, 76542, 0, 0, 1, 0, 3, 4);
 	countTests(testNumber++, -99766430, 2, 0, 3, 0, 2, 4);
 
 	countTests(testNumber++, 346234, 0, 1, 1, 3, 0, 6);
-	countTests(testNumber++, 123321, 1, 0, 0, 2, 2, 6);// тест с "неупорядоченным" исходом
+	countTests(testNumber++, 123321, 1, 0, 0, 2, 2, 6);
 	countTests(testNumber++, 1100110011, 5, 0, 0, 2, 2, 6);
 }
 
@@ -179,7 +179,7 @@ void countTests(int testNumber, int number, short expEquality, short expMore, sh
 	}
 	else
 	{
-		cout << "Case #" << testNumber << " IS NOT CORRECT. :(" << endl;//добавить конкретизацию ошибки
+		cout << "Case #" << testNumber << " IS NOT CORRECT. :(" << endl;  
 	}
 }
 
@@ -189,35 +189,35 @@ short numberAnalisys(short equality, short more, short smaller, short morePerUni
 
 	if (smaller == 0 && more == 0 && morePerUnit == 0 && smallerPerUnit == 0)
 	{
-		resultAnalysis = 1;// монотонная последовательность
+		resultAnalysis = 1; 
 	}
 	else
 	{
 		if (equality == 0 && smaller == 0 && more == 0 && morePerUnit == 0)
 		{
-			resultAnalysis = 2;// строго убывающая
+			resultAnalysis = 2;
 		}
 		else
 		{
 			if (equality == 0 && smaller == 0 && more == 0 && smallerPerUnit == 0)
 			{
-				resultAnalysis = 3;// строго возрастающая;
+				resultAnalysis = 3;
 			}
 			else
 			{
 				if ((morePerUnit == 0&& more == 0) && (smaller != 0 || smallerPerUnit != 0))
 				{
-					resultAnalysis = 4;// убывающая
+					resultAnalysis = 4;
 				}
 				else
 				{
 					if ((smallerPerUnit == 0 && smaller == 0) && (more != 0 || morePerUnit != 0))
 					{
-						resultAnalysis = 5;// возрастающая
+						resultAnalysis = 5;
 					}
 					else
 					{
-						resultAnalysis = 6;// неупорядоченная
+						resultAnalysis = 6;
 					}
 				}
 			}
