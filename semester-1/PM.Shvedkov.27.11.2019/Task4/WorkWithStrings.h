@@ -12,7 +12,7 @@ int searchFirstSubstringIndex(char*, char*,bool=true);//1task
 int getLenght(const char*);
 int compare(const char*, const char*, bool = true);
 char* createString(const char*);
-char* trancfers(char*, char*, char*, int, int);
+char* trancfers(char*, char*, char*, int);
 char toUpper(char);
 void copyString(char*, const char*);
 void runTestString();
@@ -23,10 +23,11 @@ void caseSSILowSSR(char*, char*, int, int, int);
 void caseSSRLowSSI(char*, char*, char*, char*, int, int);
 
 
-char* trancfers(char* string, char* subStringRemovable, char* subStringInsertiable, int sizesRelations, int sizeSSR)
+char* trancfers(char* string, char* subStringRemovable, char* subStringInsertiable, int sizesRelations)
 {
 	char* workingString = new char[255];
-
+	int sizeSSR = getLenght(subStringRemovable);
+	
 	for (int i = 0, index; string[i] != '\0'; i++)
 	{
 		index = searchFirstSubstringIndex(string, subStringRemovable);
