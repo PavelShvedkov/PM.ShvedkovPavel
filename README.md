@@ -116,7 +116,17 @@
 | -------- | -------- | --------| 
 | 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task1(First substring in string(with tests)))](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-1/PM.Shvedkov.27.11.2019/Task1)
 | 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|[Task2()](/)
-| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task3(Вecimal to pth)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-1/PM.Shvedkov.27.11.2019/Task3)
+| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task3(Decimal to pth)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-1/PM.Shvedkov.27.11.2019/Task3)
 | 4 |![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task4(Replacement substring in string)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-1/PM.Shvedkov.27.11.2019/Task4)
 | 5 |![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|[Task5()](/)
 | 6 |![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|[Task6()](/)
+
+
+
+### 04.12.2019
+| Task | Task Status | Additional/Comments |
+| -------- | -------- | --------| 
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|[Task1(Alphabetical sort list))](/)
+| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|[Task2(
+Sort list by size)](/)
+| 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|[Task3(Sorting a list by occurrence of a character)](/)
