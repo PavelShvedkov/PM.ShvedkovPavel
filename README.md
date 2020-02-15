@@ -118,7 +118,7 @@
 | 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|[Task2()](/)
 | 3 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task3(Decimal to pth)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-1/PM.Shvedkov.27.11.2019/Task3)
 | 4 |![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task4(Replacement substring in string)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-1/PM.Shvedkov.27.11.2019/Task4)
-| 5 |![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|[Task5()](/)
+| 5 |![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task5(Delete word given length)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/PM.Shvedkov.27.11.2019/Task5/trash.cpp)
 | 6 |![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|[Task6()](/)
 
 
@@ -144,3 +144,13 @@
 | -------- | -------- | --------| 
 | 3 | ![Scheduled](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/Control%20Work%20Autumn%202019/Complete%20task3/Proof.png)|[Task3(Summ)](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-1/Control%20Work%20Autumn%202019/Complete%20task3/Task%203.cpp)
 
+
+
+## 2 семестр
+
+
+### 12.02.2020
+| Task | Task Status| Additional |
+| -------- | -------- | --------| 
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|Task1(Vectors sorting)
+| 2 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|Task1(Vectors sorting (with an array of lengths)
