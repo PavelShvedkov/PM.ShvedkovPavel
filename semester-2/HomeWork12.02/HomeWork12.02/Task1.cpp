@@ -96,6 +96,9 @@ void testCase(int number)
 	{
 		cout << " Test #" << number << " is failed" << endl;
 	}
+	
+	delete[]actual;
+	delete[]expected;
 }
 
 void menuText()
