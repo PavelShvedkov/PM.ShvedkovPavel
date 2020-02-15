@@ -59,6 +59,25 @@ void swap(point*, point*);
 void fillingArray(point*, int);
 void shuffleArray(point*, int);
 bool areEqual(point*, int, point*, int);
+bool areEqual(double*, int, double*, int);
+
+bool areEqual(double* lhs, int n, double* rhs, int m)
+{
+	if (n != m)
+	{
+		return false;
+	}
+
+	for (double* p = lhs, *q = rhs; p < lhs + n; p++, q++)
+	{
+		if (*p != *q)
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
 
 bool areEqual(point* lhs, int n, point* rhs, int m)
 {
