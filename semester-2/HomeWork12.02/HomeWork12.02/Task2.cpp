@@ -56,12 +56,12 @@ void workWithConsole()
 
 	fillingArray(vectors, n);
 
-	double* lengths = initLengths(vectors, n);
+	double* lengths=initLengths(vectors, n);
 
 	cout << " Unsorting vectors:" << endl;
 	displayPoints(vectors, n);
 
-	sortVectors(vectors, lengths, n);
+	sortVectors(vectors,lengths,n);
 
 	cout << " Sorting vectors:" << endl;
 	displayPoints(vectors, n);
@@ -85,15 +85,15 @@ void testCase(int number)
 {
 	const int n = 5;
 
-	point* actual = initArray(n, 1);
-	point* expected = initArray(n, 1);
+	point* actual=initArray(n, 1);
+	point* expected=initArray(n, 1);
 	double* actLengths = initLengths(actual, n);
 	double* expLengths = initLengths(actual, n);
 
 	shuffleArray(actual, n);
 	sortVectors(actual, n);
 
-	if (areEqual(actual, n, expected, n) && areEqual(actLengths, n, expLengths, n))
+	if (areEqual(actual, n,expected, n)&&areEqual(actLengths,n,expLengths,n))
 	{
 		cout << " Test #" << number << " is ok" << endl;
 	}
@@ -101,7 +101,7 @@ void testCase(int number)
 	{
 		cout << " Test #" << number << " is failed" << endl;
 	}
-
+	
 	delete[]actual;
 	delete[]expected;
 }
