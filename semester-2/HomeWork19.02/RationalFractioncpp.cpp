@@ -4,10 +4,6 @@ using namespace std;
 
 int GCF(int, int);
 void swap(int*, int*);
-void menu();
-void menuText();
-void operationList();
-void workWithConsole();
 class RationalFraction
 {
 private:
@@ -26,14 +22,14 @@ public:
 		denominator = denom;
 	}
 
-	int* takeNumerator()
+	int* TakeNumeratorAdress()
 	{
 		int* refNumerator = &numerator;
 
 		return refNumerator;
 	}
 
-	int* takeDenominator()
+	int* takeDenominatorAdress()
 	{
 		int* refDenominator = &denominator;
 
@@ -105,7 +101,26 @@ public:
 			cout << " " << numerator << "/" << denominator << " ";
 		}
 	}
+
+	bool operator ==(RationalFraction rho)
+	{
+		if (numerator == *(rho.TakeNumeratorAdress()) && denominator == *(rho.takeDenominatorAdress()))
+		{
+			return true;
+		}
+
+		return false;
+	}
 };
+typedef int (*testOption)(RationalFraction, RationalFraction, RationalFraction, int);
+
+void menu();
+void menuText();
+void operationList();
+void workWithConsole();
+void tests();
+void startTest(testOption);
+int testGCF(RationalFraction, RationalFraction, RationalFraction, int);
 
 RationalFraction addition(RationalFraction, RationalFraction);
 RationalFraction addition(RationalFraction, int);
@@ -180,6 +195,10 @@ void menu()
 			operationList();
 			break;
 		case '3':
+			system("cls");
+			tests();
+			break;
+		case '4':
 			return;
 		default:
 			cout << "Invalid operation. Try again." << endl;
@@ -194,7 +213,8 @@ void menuText()
 {
 	cout << "Press 1 to work with the console." << endl;
 	cout << "Press 2 to display a list of operations." << endl;
-	cout << "Press 3 to exit." << endl;
+	cout << "Press 3 to select test." << endl;
+	cout << "Press 4 to exit." << endl;
 }
 
 void operationList()
@@ -273,7 +293,7 @@ void workWithConsole()
 		break;
 	default:
 		cout << " Not valid operation" << endl;
-		return ;
+		return;
 	}
 
 	switch (operands)
@@ -299,12 +319,73 @@ void workWithConsole()
 	}
 }
 
+void tests()
+{
+
+	int button;
+
+	cout << " Enter 1 to run the test to find the largest common factor" << endl;
+	cout << " Enter 2 to return to the menu" << endl;
+	while (true)
+	{
+		cin >> button;
+
+		switch (button)
+		{
+		case 1:
+			startTest(testGCF);
+			break;
+		case 2:
+			system("cls");
+			menu();
+			break;
+		default:
+			cout << " Not valid operation, tre again." << endl;
+			break;
+		}
+	}
+}
+
+void startTest(testOption option)
+{
+	int testNumber = 1;
+
+	option(RationalFraction(2, 3), RationalFraction(4, 27), RationalFraction(2, 3), testNumber++);
+
+	option(RationalFraction(-2, 3), RationalFraction(4, 27), RationalFraction(2, 3), testNumber++);
+
+	option(RationalFraction(2, 3), RationalFraction(0, 27), RationalFraction(2, 3), testNumber++);
+
+	option(RationalFraction(2, 3), RationalFraction(1, 1), RationalFraction(1, 1), testNumber++);
+
+	option(RationalFraction(2, -3), RationalFraction(-2, 3), RationalFraction(2, 3), testNumber++);
+}
+
+int testGCF(RationalFraction lho, RationalFraction rho, RationalFraction expected, int testNumber)
+{
+	int numeratorLHO = *(lho.TakeNumeratorAdress()), numeratorRHO = *(rho.TakeNumeratorAdress());
+	int denominatorLHO = *(lho.takeDenominatorAdress()), denominatorRHO = *(rho.takeDenominatorAdress());
+
+	RationalFraction actual(GCF(numeratorLHO, numeratorRHO), (GCF(denominatorLHO, denominatorRHO)));
+
+	if (actual == expected)
+	{
+		cout << " Test " << testNumber << " is ok." << endl;
+		return 1;
+	}
+	else
+	{
+		cout << " Test " << testNumber << " is failed." << endl;
+		return 0;
+	}
+}
+
 RationalFraction addition(RationalFraction lho, RationalFraction rho)
 {
 	int numerator, denominator;
 
-	denominator = *(lho.takeDenominator()) * *(rho.takeDenominator());
-	numerator = (denominator / *(lho.takeDenominator())) * *(lho.takeNumerator()) + (denominator / *(rho.takeDenominator())) * *(rho.takeNumerator());
+	denominator = *(lho.takeDenominatorAdress()) * *(rho.takeDenominatorAdress());
+	numerator = (denominator / *(lho.takeDenominatorAdress())) * *(lho.TakeNumeratorAdress()) + (denominator / *(rho.takeDenominatorAdress())) * *(rho.TakeNumeratorAdress());
 
 	int commonFactor = GCF(numerator, denominator);
 	numerator /= commonFactor;
@@ -320,8 +401,8 @@ RationalFraction addition(RationalFraction lho, int rho)
 	RationalFraction rhFraction = toRationalFraction(rho);
 	int numerator, denominator;
 
-	denominator = *(lho.takeDenominator()) * *(rhFraction.takeDenominator());
-	numerator = (denominator / *(lho.takeDenominator())) * *(lho.takeNumerator()) + (denominator / *(rhFraction.takeDenominator())) * *(rhFraction.takeNumerator());
+	denominator = *(lho.takeDenominatorAdress()) * *(rhFraction.takeDenominatorAdress());
+	numerator = (denominator / *(lho.takeDenominatorAdress())) * *(lho.TakeNumeratorAdress()) + (denominator / *(rhFraction.takeDenominatorAdress())) * *(rhFraction.TakeNumeratorAdress());
 
 	int commonFactor = GCF(numerator, denominator);
 	numerator /= commonFactor;
@@ -348,8 +429,8 @@ RationalFraction multiplication(RationalFraction lho, RationalFraction rho)
 {
 	int numerator, denominator;
 
-	numerator = *(lho.takeNumerator()) * *(rho.takeNumerator());
-	denominator = *(lho.takeDenominator()) * *(rho.takeDenominator());
+	numerator = *(lho.TakeNumeratorAdress()) * *(rho.TakeNumeratorAdress());
+	denominator = *(lho.takeDenominatorAdress()) * *(rho.takeDenominatorAdress());
 
 	RationalFraction answer(numerator, denominator);
 
@@ -361,8 +442,8 @@ RationalFraction multiplication(RationalFraction lho, int rho)
 	RationalFraction rhFraction = toRationalFraction(rho);
 	int numerator, denominator;
 
-	numerator = *(lho.takeNumerator()) * *(rhFraction.takeNumerator());
-	denominator = *(lho.takeDenominator()) * *(rhFraction.takeDenominator());
+	numerator = *(lho.TakeNumeratorAdress()) * *(rhFraction.TakeNumeratorAdress());
+	denominator = *(lho.takeDenominatorAdress()) * *(rhFraction.takeDenominatorAdress());
 
 	RationalFraction answer(numerator, denominator);
 
@@ -371,7 +452,7 @@ RationalFraction multiplication(RationalFraction lho, int rho)
 
 RationalFraction division(RationalFraction lho, RationalFraction rho)
 {
-	if (*(rho.takeNumerator()) == 0)
+	if (*(rho.TakeNumeratorAdress()) == 0)
 	{
 		cout << " The universe collapsed, you divided by zero..." << endl << "The original fraction is returned" << endl;
 
@@ -410,8 +491,8 @@ RationalFraction power(RationalFraction basis, int exponent)
 
 	for (int i = 0; i < abs(exponent); i++)
 	{
-		numerator *= *(basis.takeNumerator());
-		denominator *= *(basis.takeDenominator());
+		numerator *= *(basis.TakeNumeratorAdress());
+		denominator *= *(basis.takeDenominatorAdress());
 	}
 
 	RationalFraction answer(numerator, denominator);
@@ -421,28 +502,28 @@ RationalFraction power(RationalFraction basis, int exponent)
 
 void squareRoot(RationalFraction* fraction)
 {
-	*(fraction->takeNumerator()) = sqrt(*(fraction->takeNumerator()));
-	*(fraction->takeDenominator()) = sqrt(*(fraction->takeDenominator()));
+	*(fraction->TakeNumeratorAdress()) = sqrt(*(fraction->TakeNumeratorAdress()));
+	*(fraction->takeDenominatorAdress()) = sqrt(*(fraction->takeDenominatorAdress()));
 }
 
 void reverseFraction(RationalFraction* fraction)
 {
-	if (*(fraction->takeNumerator()) == 0)
+	if (*(fraction->TakeNumeratorAdress()) == 0)
 	{
 		cout << " There is no reverse for zero" << endl;
 		return;
 	}
 
-	swap(fraction->takeDenominator(), fraction->takeNumerator());
+	swap(fraction->takeDenominatorAdress(), fraction->TakeNumeratorAdress());
 }
 
 RationalFraction greatestCommonFactor(RationalFraction lho, RationalFraction rho)
 {
-	int leftNumerator = *(lho.takeNumerator()), leftDenominator = *(lho.takeDenominator());
-	int rightNumerator = *(rho.takeNumerator()), rightDenominator = *(rho.takeDenominator());
+	int leftNumerator = *(lho.TakeNumeratorAdress()), leftDenominator = *(lho.takeDenominatorAdress());
+	int rightNumerator = *(rho.TakeNumeratorAdress()), rightDenominator = *(rho.takeDenominatorAdress());
 
-	int numerator = GCF(*(lho.takeNumerator()), *(rho.takeNumerator()));
-	int denominator = GCF(*(lho.takeDenominator()), *(rho.takeDenominator()));
+	int numerator = GCF(*(lho.TakeNumeratorAdress()), *(rho.TakeNumeratorAdress()));
+	int denominator = GCF(*(lho.takeDenominatorAdress()), *(rho.takeDenominatorAdress()));
 
 	RationalFraction answer(numerator, denominator);
 
@@ -452,11 +533,11 @@ RationalFraction greatestCommonFactor(RationalFraction lho, RationalFraction rho
 RationalFraction greatestCommonFactor(RationalFraction lho, int rho)
 {
 	RationalFraction rhFraction = toRationalFraction(rho);
-	int leftNumerator = *(lho.takeNumerator()), leftDenominator = *(lho.takeDenominator());
-	int rightNumerator = *(rhFraction.takeNumerator()), rightDenominator = *(rhFraction.takeDenominator());
+	int leftNumerator = *(lho.TakeNumeratorAdress()), leftDenominator = *(lho.takeDenominatorAdress());
+	int rightNumerator = *(rhFraction.TakeNumeratorAdress()), rightDenominator = *(rhFraction.takeDenominatorAdress());
 
-	int	numerator = GCF(*(lho.takeNumerator()), *(rhFraction.takeNumerator()));
-	int	denominator = GCF(*(lho.takeDenominator()), *(rhFraction.takeDenominator()));
+	int	numerator = GCF(*(lho.TakeNumeratorAdress()), *(rhFraction.TakeNumeratorAdress()));
+	int	denominator = GCF(*(lho.takeDenominatorAdress()), *(rhFraction.takeDenominatorAdress()));
 
 	RationalFraction answer(numerator, denominator);
 
