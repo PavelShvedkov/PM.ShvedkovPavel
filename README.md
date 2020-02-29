@@ -161,4 +161,4 @@
 ### 19.02.2020
 | Task | Task Status| Additional |
 | -------- | -------- | --------| 
-| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Rational fractions](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork19.02/RationalFractioncpp.cpp)
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Rational fractions](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-2/HomeWork19.02)
