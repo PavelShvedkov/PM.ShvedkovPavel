@@ -172,7 +172,7 @@
 
 
 
-### 27.02.2020
+### 11.02.2020
 | Task | Task Status| Additional |
 | -------- | -------- | --------| 
-| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Class array](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-2/HomeWork15.03)
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Class array](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-2/HomeWork11.03)
