@@ -138,20 +138,20 @@ void Array::shuffle()
 	}
 
 }
-int Array::counter(int pattern,Comparer comparer) const
+int Array::counter(int pattern, Comparer comparer) const
 {
-	int counter=0;
+	int counter = 0;
 
 	for (int i = 0; i < getLength(); i++)
 	{
-		if (comparer(array[i],pattern))
+		if (comparer(array[i], pattern))
 		{
 			counter++;
 		}
 	}
 	return counter;
 }
-int* Array::selection(int& newLength,Filter filter) const
+int* Array::selection(int& newLength, Filter filter) const
 {
 	newLength = 0;
 
@@ -166,7 +166,7 @@ int* Array::selection(int& newLength,Filter filter) const
 			++newLength;
 		}
 	}
-	
+
 	int* newArray = new int[newLength];
 
 	for (int i = 0; i < newLength; i++)
@@ -184,7 +184,7 @@ int* Array::search(int& indexArrayLength, Filter filter)
 	int length = getLength();
 	int* buffer = new int[length];
 
-	for (int i = 0,j=0; i < length; i++)
+	for (int i = 0, j = 0; i < length; i++)
 	{
 		if (filter(array[i]))
 		{
@@ -224,18 +224,48 @@ int& Array::operator[](const int index)
 
 	return array[index];
 }
-//Array& Array:: operator=( Array& rho)
-//{
-//	int newLength = rho.getLength();
-//
-//	this->setLength(newLength);
-//
-//	for (int i = 0; i < newLength; i++)
-//	{
-//		this->setItem(i,rho.getItem(i));
-//	}
-//
-//	return *this;
-//}
+const int& Array::operator[](int index)const
+{
+	if (index < 0 || index >= getLength())
+	{
+		throw std::out_of_range(" Out of range");
+	}
+
+	return array[index];
+}
+bool Array::operator==(Array& rho)
+{
+	if (this->getLength() != rho.getLength())
+	{
+		return false;
+	}
+
+	for (int i = 0; i < this->getLength(); i++)
+	{
+		if (this->array[i] != rho[i])
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+bool Array::operator !=(Array& rho)
+{
+	return !(*this == rho);
+}
+Array& Array:: operator=( Array& rho)
+{
+	int newLength = rho.getLength();
+
+	this->setLength(newLength);
+
+	for (int i = 0; i < newLength; i++)
+	{
+		this->setItem(i,rho.getItem(i));
+	}
+
+	return *this;
+}
 
 

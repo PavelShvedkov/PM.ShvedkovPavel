@@ -31,7 +31,10 @@ public:
 
 
 	int& operator [](int);
-	Array& operator =( Array&);//нужна помощь
+	const int& operator [](int)const;
+	Array& operator =(Array&);//нужна помощь
+	bool operator ==(Array&);
+	bool operator !=(Array&);
 
 private:
 	int* array;
