@@ -18,13 +18,14 @@ int main()
 
 	a.randomFilling(50);
 	a.display();
-
 	cout << endl;
+	a.shift(3, 1);
+	a.display();
 
-	int n = 0;
+	/*int n = 0;
 	int* p = a.selection(n, isEven);
 
-	myArrays::displayArray(p,n);
+	myArrays::displayArray(p,n);*/
 }
 
 Array test()

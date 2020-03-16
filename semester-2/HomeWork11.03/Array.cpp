@@ -138,6 +138,39 @@ void Array::shuffle()
 	}
 
 }
+void Array::shift(int steps, bool direction)
+{
+	int length = getLength();
+
+	if (direction)
+	{
+		for (int i = 0; i < steps; i++)
+		{
+			int temp = this->array[length - 1];
+
+			for (int j = length; j >0; j--)
+			{
+				this->array[j] = this->array[j - 1];
+			}
+
+			this->array[0] = temp;
+		}
+	}
+	else
+	{
+		for (int i = 0; i < steps; i++)
+		{
+			int temp = this->array[0];
+
+			for (int j = 0; j <length; j++)
+			{
+				this->array[j] = this->array[j + 1];
+			}
+
+			this->array[length - 1] = temp;
+		}
+	}
+}
 int Array::counter(int pattern, Comparer comparer) const
 {
 	int counter = 0;

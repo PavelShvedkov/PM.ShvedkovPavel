@@ -25,6 +25,7 @@ public:
 	void inverted();
 	void randomFilling(int);
 	void shuffle();
+	void shift(int,bool);
 	int counter(int, Comparer)const;
 	int* selection(int&, Filter)const;
 	int* search(int&, Filter);
