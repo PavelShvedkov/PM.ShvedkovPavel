@@ -11,17 +11,6 @@ void showContentsFile(string);
 void createNAddToFile(const string&, string);
 void deleteWordsByLengthInFile(const string&,string&,int);
 
-
-/*В текстовом файле имеется набор строк.
-Файл можно писать вручную. Удалить из строки все слова заданной длины
-(т.е.на выходе получаем новый файл без заданных слов).
-Предполагается работа в цикле с несколькими строками.Концом строки принять терминирующий ‘\0’.*/
-/*The text file has a set of lines.
-The file can be written manually. Delete all words of a given length from a string
-(i.e., at the output we get a new file without the given words).
-It is supposed to work in a loop with several lines. At the end of the line, accept the terminating*/
-
-
 int main()
 {
 	int n = 4;
