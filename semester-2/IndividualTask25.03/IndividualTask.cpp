@@ -15,14 +15,14 @@ void catArray(Array&, Array&);
 void deleteCorresp(Array&, Filter);
 void deleteElement(Array&, int);
 void deleteRepits(Array&);
-void copyArrayAfter(Array&, Array&, int);//копировать из, после(по умолчанию весь)
-void copyArrayTo(Array&, Array&, int);//копировать из, до(по умолчанию весь)
-void findCorrespNumbers(Array&, Array&, Filter);//массив чисел соответствующих правилу
+void copyArrayAfter(Array&, Array&, int);
+void copyArrayTo(Array&, Array&, int);
+void findCorrespNumbers(Array&, Array&, Filter);
 void quickSort(Array&, Array&, Comparer);
 void quickSort(Array&, Array&, int, int, Comparer);
 void mergeSort(Array&, Array&, Comparer);
 void mergeSort(Array&, Array&, Comparer);
-int findFirstCorrespNumber(Array&, Filter);//найти первое соответствие правилу
+int findFirstCorrespNumber(Array&, Filter);
 bool isPositive(int);
 bool isEven(int);
 bool isPositivEven(int);
@@ -32,56 +32,28 @@ int decrease(int, int);
 void fillingMethod(Array&);
 void outMethod(Array&);
 
- 
+
 
 int main()
 {
 	int n = 10, maxRandom = 10;
 	Array source(n), newArray(n);;
 
-	source.randomFilling(maxRandom);
-	source.shuffle();
+	fillingMethod(source);
 
-	/*createPositivEvenArray(source, newArray);
+	createPositivEvenArray(source, newArray);
 	sortByNumberOfCharInHex(source, decrease);
-	deleteRepits(source);*/
+	deleteRepits(source);
 
-	string path = "text.txt";
-	ofstream fout;
-
-	fout.open(path);
-
-	if (!fout.is_open())
-	{
-		cout << "Cannot open file to read!" << endl;
-		system("pause");
-		exit(1);
-	}
-	source.display();
-	cout << endl;
-	fout.write((char*)&source, sizeof(Array));
-	fout.close();
-
-	ifstream fin;
-
-	fin.open(path, ifstream::in);
-
-	if (!fin.is_open())
-	{
-		cout << "Cannot open file to read!" << endl;
-		system("pause");
-		exit(1);
-	}
-
-	Array retr(1);
-	fin.read((char*)&retr,sizeof(Array));
-	retr.display();
-	fin.close();
+	outMethod(newArray);
 }
 
 void fillingMethod(Array& source)
 {
-	int button = 0,max=10;
+	string path = "";
+	ifstream fin;
+	Array source(1);
+	int button = 0, max = 10;
 	cout << " Enter 1 to fill out from the keyboard." << endl;
 	cout << " Enter 2 for automatic filling." << endl;
 	cout << " Enter 3 to fill out from a file." << endl;
@@ -104,6 +76,19 @@ void fillingMethod(Array& source)
 		break;
 	case 3:
 		cout << " Enter path to file or file name." << endl;
+		cin >> path;
+
+		fin.open(path, ifstream::in);
+
+		if (!fin.is_open())
+		{
+			cout << "Cannot open file to read!" << endl;
+			system("pause");
+			exit(1);
+		}
+
+		fin.read((char*)&source, sizeof(Array));
+		fin.close();
 		break;
 	default:
 		cout << " Not valid data." << endl;
@@ -113,7 +98,10 @@ void fillingMethod(Array& source)
 
 void outMethod(Array& result)
 {
+	ofstream fout;
+	string path;
 	int button = 0;
+
 	cout << " Enter 1 to display result." << endl;
 	cout << " Enter 2 to send result in file." << endl;
 
@@ -123,9 +111,23 @@ void outMethod(Array& result)
 	{
 	case 1:
 		result.display();
-			cout << endl;
+		cout << endl;
 		break;
 	case 2:
+		cout << " Enter path to file or file name." << endl;
+		cin >> path;
+
+		fout.open(path);
+
+		if (!fout.is_open())
+		{
+			cout << "Cannot open file to read!" << endl;
+			system("pause");
+			exit(1);
+		}
+
+		fout.write((char*)&result, sizeof(Array));
+		fout.close();
 		break;
 	default:
 		cout << " Not valid data." << endl;
