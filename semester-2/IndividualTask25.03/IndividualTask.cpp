@@ -37,28 +37,47 @@ void outMethod(Array&);
 int main()
 {
 	int n = 10, maxRandom = 10;
-	Array source(n), newArray(n);;
+	Array source(n), newArray(n);
+	ofstream fout;
+	string path = "test.txt";
+	int example[10] = { 12,43,29,171,2731,424,699387,22,-1,4 };
 
-	fillingMethod(source);
+	
+	for (int i = 0; i < n; i++)
+	{
+		source[i] = example[i];
+	}
 
-	createPositivEvenArray(source, newArray);
-	sortByNumberOfCharInHex(source, decrease);
-	deleteRepits(source);
+	fout.open(path);
 
-	outMethod(newArray);
+	if (!fout.is_open())
+	{
+		cout << "Cannot open file to read!" << endl;
+		system("pause");
+		exit(1);
+	}
+
+	fout.write((char*)&source, sizeof(Array));
+	fout.close();
+
+		fillingMethod(source);
+		createPositivEvenArray(source, newArray);
+		sortByNumberOfCharInHex(source, decrease);
+		deleteRepits(source);
+		outMethod(newArray);
 }
 
 void fillingMethod(Array& source)
 {
 	string path = "";
 	ifstream fin;
-	Array source(1);
 	int button = 0, max = 10;
 	cout << " Enter 1 to fill out from the keyboard." << endl;
 	cout << " Enter 2 for automatic filling." << endl;
 	cout << " Enter 3 to fill out from a file." << endl;
 
 	cin >> button;
+	system("cls");
 
 	switch (button)
 	{
@@ -67,16 +86,20 @@ void fillingMethod(Array& source)
 		{
 			cout << " Enter " << i + 1 << " element" << endl;
 			cin >> source[i];
+			system("cls");
 		}
 		break;
 	case 2:
 		cout << " Enter max element random fill." << endl;
 		cin >> max;
+		system("cls");
+
 		source.randomFilling(max);
 		break;
 	case 3:
 		cout << " Enter path to file or file name." << endl;
 		cin >> path;
+		system("cls");
 
 		fin.open(path, ifstream::in);
 
@@ -106,6 +129,7 @@ void outMethod(Array& result)
 	cout << " Enter 2 to send result in file." << endl;
 
 	cin >> button;
+	system("cls");
 
 	switch (button)
 	{
@@ -116,6 +140,7 @@ void outMethod(Array& result)
 	case 2:
 		cout << " Enter path to file or file name." << endl;
 		cin >> path;
+		system("cls");
 
 		fout.open(path);
 
@@ -148,6 +173,8 @@ void createPositivEvenArray(Array& source, Array& newArray)
 	catArray(buffer1, buffer2);
 
 	source = buffer1;
+
+	system("cls");
 }
 
 void sortByNumberOfCharInHex(Array& source, Comparer comparator)
@@ -194,6 +221,8 @@ void createKeysSymbolsInHex(Array& keys, Array& source)
 	}
 
 	keys = buffer;
+
+	system("cls");
 }
 
 void deleteRepits(Array& source)
@@ -226,6 +255,8 @@ void catArray(Array& destination, Array& source)
 	}
 
 	destination = buffer;
+
+	system("cls");
 }
 
 void deleteCorresp(Array& source, Filter rule)
@@ -250,6 +281,8 @@ void deleteCorresp(Array& source, Filter rule)
 	}
 
 	source = buffer2;
+
+	system("cls");
 }
 
 void deleteElement(Array& source, int index)
@@ -280,6 +313,8 @@ void deleteElement(Array& source, int index)
 	}
 
 	source = buffer;
+
+	system("cls");
 }
 
 void copyArrayAfter(Array& destination, Array& source, int index)
@@ -304,6 +339,8 @@ void copyArrayAfter(Array& destination, Array& source, int index)
 	}
 
 	destination = buffer;
+
+	system("cls");
 }
 
 void copyArrayTo(Array& destination, Array& source, int index)
@@ -328,6 +365,8 @@ void copyArrayTo(Array& destination, Array& source, int index)
 	}
 
 	destination = buffer;
+
+	system("cls");
 }
 
 void findCorrespNumbers(Array& destination, Array& source, Filter rule)
@@ -352,6 +391,8 @@ void findCorrespNumbers(Array& destination, Array& source, Filter rule)
 	}
 
 	destination = buffer2;
+
+	system("cls");
 }
 
 int findFirstCorrespNumber(Array& source, Filter rule)
@@ -392,11 +433,11 @@ void quickSort(Array& source, Array& key, int first, int last, Comparer comparat
 
 	do
 	{
-		while /*(key[f] > mid)*/ (comparator(key[f], mid) > 0)
+		while (comparator(key[f], mid) > 0)
 		{
 			++f;
 		}
-		while /*(key[l] < mid)*/ (comparator(mid, key[l]) > 0)
+		while (comparator(mid, key[l]) > 0)
 		{
 			--l;
 		}
