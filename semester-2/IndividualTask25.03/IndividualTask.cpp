@@ -21,7 +21,6 @@ void findCorrespNumbers(Array&, Array&, Filter);
 void quickSort(Array&, Array&, Comparer);
 void quickSort(Array&, Array&, int, int, Comparer);
 void mergeSort(Array&, Array&, Comparer);
-void mergeSort(Array&, Array&, Comparer);
 int findFirstCorrespNumber(Array&, Filter);
 bool isPositive(int);
 bool isEven(int);
