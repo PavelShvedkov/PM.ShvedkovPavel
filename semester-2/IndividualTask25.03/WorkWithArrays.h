@@ -221,7 +221,7 @@ namespace myArrays
 	}
 
 
-		bool areEqual(int* lhs, int n, int* rhs, int m)
+	bool areEqual(int* lhs, int n, int* rhs, int m)
 		{
 			isDataValid(lhs, n);
 			isDataValid(rhs, m);

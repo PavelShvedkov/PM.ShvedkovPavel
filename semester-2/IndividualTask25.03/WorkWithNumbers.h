@@ -12,57 +12,57 @@ int unitsInBinary(int);
 int hexadecimalCharacter(int, char);
 void hexRepresentation(int);
 
-void hexRepresentation(int number)
-{
-	bool sign=0;
-
-	if (number>=0)
-	{
-		sign = 1;
-	}
-
-	number = abs(number);
-	char symbols[16] = { '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F' };
-	string hexRepr = "", reverseHexRepr = "";
-	int quotient=number, reminder;
-
-	if (number<16)
-	{
-		if (!sign)
-		{
-			reverseHexRepr ='-'+ symbols[number];
-		}
-		else
-		{
-			reverseHexRepr = symbols[number];
-		}
-
-		cout << reverseHexRepr<<'\t';
-		return;
-	}
-	else
-	{
-		while (quotient)
-		{
-			reminder = number % 16;
-			quotient = (number / 16);
-			hexRepr += symbols[reminder];
-			number = quotient;
-		}
-
-		if (!sign)
-		{
-			hexRepr += '-';
-		}
-
-		for (int i = hexRepr.length(); i >= 0; i--)
-		{
-			reverseHexRepr += hexRepr[i];
-		}
-
-		cout << reverseHexRepr<<'\t';
-	}
-}
+//void hexRepresentation(int number)
+//{
+//	bool sign=0;
+//
+//	if (number>=0)
+//	{
+//		sign = 1;
+//	}
+//
+//	number = abs(number);
+//	char symbols[16] = { '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F' };
+//	char* hexRepr = "", *reverseHexRepr = "";
+//	int quotient=number, reminder;
+//
+//	if (number<16)
+//	{
+//		if (!sign)
+//		{
+//			reverseHexRepr ='-'+ symbols[number];
+//		}
+//		else
+//		{
+//			reverseHexRepr = symbols[number];
+//		}
+//
+//		cout << reverseHexRepr<<'\t';
+//		return;
+//	}
+//	else
+//	{
+//		while (quotient)
+//		{
+//			reminder = number % 16;
+//			quotient = (number / 16);
+//			hexRepr += symbols[reminder];
+//			number = quotient;
+//		}
+//
+//		if (!sign)
+//		{
+//			hexRepr += '-';
+//		}
+//
+//		for (int i = hexRepr.length(); i >= 0; i--)
+//		{
+//			reverseHexRepr += hexRepr[i];
+//		}
+//
+//		cout << reverseHexRepr<<'\t';
+//	}
+//}
 
 
 int hexadecimalCharacter(int decimalNumber, char symbol)

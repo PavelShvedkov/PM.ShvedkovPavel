@@ -2,6 +2,7 @@
 #define ARRAY_H
 
 #include <iostream>
+#include <fstream>
 #include "ctime"
 
 typedef int(*Comparer)(int, int);
@@ -25,18 +26,25 @@ public:
 	void display()const;
 	void sort();
 	void sort(Comparer);
+	void mergeSort(Array&, Comparer);
+	void quickSort(Array&,int,int,Comparer);
 	void inverted();
 	void randomFilling(int);
 	void shuffle();
 	void shift(int,bool);
+	void writeBinFile(const char*);
+	void readBinFile(const char*);
+	void deleteRepits();
+	void deleteElement(int);
 	int counter(int, Comparer)const;
-	int* selection(int&, Filter)const;
-	int* search(int&, Filter);
+	void selection(Array&, Filter)const;
+	void search(Array&, Filter);
+	void screening(Filter);
 
 
 	int& operator [](int);
 	const int& operator [](int)const;
-	Array& operator =(Array&);//нужна помощь
+	Array& operator =(Array&);
 	bool operator ==(Array&);
 	bool operator !=(Array&);
 

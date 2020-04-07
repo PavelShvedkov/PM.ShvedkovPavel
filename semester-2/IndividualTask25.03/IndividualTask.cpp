@@ -1,4 +1,4 @@
-#include <fstream>
+#define _CRT_SECURE_NO_WARNINGS
 #include "Array.h"
 #include "WorkWithArrays.h"
 #include "WorkWithNumbers.h"
@@ -7,70 +7,62 @@ using namespace std;
 using namespace myArrays;
 
 
+
 void createPositivEvenArray(Array&, Array&);
 void sortByNumberOfCharInHex(Array&, Comparer);
 void createKeysSymbolsInHex(Array&, Array&);
 void createKeysIndRepits(Array&, Array&);
 void catArray(Array&, Array&);
 void deleteCorresp(Array&, Filter);
-void deleteElement(Array&, int);
 void deleteRepits(Array&);
 void copyArrayAfter(Array&, Array&, int);
 void copyArrayTo(Array&, Array&, int);
 void findCorrespNumbers(Array&, Array&, Filter);
 void quickSort(Array&, Array&, Comparer);
-void quickSort(Array&, Array&, int, int, Comparer);
-void mergeSort(Array&, Array&, Comparer);
 void mergeSort(Array&, Array&, Comparer);
 int findFirstCorrespNumber(Array&, Filter);
 bool isPositive(int);
 bool isEven(int);
 bool isPositivEven(int);
 bool isNegativ(int);
+bool isThereLetter(int);
 int increase(int, int);
 int decrease(int, int);
 void fillingMethod(Array&);
 void outMethod(Array&);
+void readBinFile(const char*, Array&);
+void readTxtFile(const char*, Array&);
+void writeBinFile(const char*, Array&);
+void stringToArray(char*, Array&);
 
 
 
 int main()
 {
 	int n = 10, maxRandom = 10;
-	Array source(n), newArray(n);
+	Array source(n), buffer(n), newArray(n);
 	ofstream fout;
-	string path = "test.txt";
+	char path[] = "test.txt";
 	int example[10] = { 12,43,29,171,2731,424,699387,22,-1,4 };
 
-	
 	for (int i = 0; i < n; i++)
 	{
-		source[i] = example[i];
+		buffer[i] = example[i];
 	}
 
-	fout.open(path);
+	buffer.writeBinFile(path);
 
-	if (!fout.is_open())
-	{
-		cout << "Cannot open file to read!" << endl;
-		system("pause");
-		exit(1);
-	}
-
-	fout.write((char*)&source, sizeof(Array));
-	fout.close();
-
-		fillingMethod(source);
-		createPositivEvenArray(source, newArray);
-		sortByNumberOfCharInHex(source, decrease);
-		deleteRepits(source);
-		outMethod(newArray);
+	fillingMethod(source);
+	source.display();
+	createPositivEvenArray(source, newArray);
+	sortByNumberOfCharInHex(source, decrease);
+	source.deleteRepits();
+	outMethod(newArray);
 }
 
 void fillingMethod(Array& source)
 {
-	string path = "";
-	ifstream fin;
+	char* path = new char[100];
 	int button = 0, max = 10;
 	cout << " Enter 1 to fill out from the keyboard." << endl;
 	cout << " Enter 2 for automatic filling." << endl;
@@ -100,18 +92,10 @@ void fillingMethod(Array& source)
 		cout << " Enter path to file or file name." << endl;
 		cin >> path;
 		system("cls");
+		source.display();
+		source.readBinFile(path);
 
-		fin.open(path, ifstream::in);
-
-		if (!fin.is_open())
-		{
-			cout << "Cannot open file to read!" << endl;
-			system("pause");
-			exit(1);
-		}
-
-		fin.read((char*)&source, sizeof(Array));
-		fin.close();
+		delete[]path;
 		break;
 	default:
 		cout << " Not valid data." << endl;
@@ -121,9 +105,10 @@ void fillingMethod(Array& source)
 
 void outMethod(Array& result)
 {
-	ofstream fout;
-	string path;
+	char* path = new char[100];
 	int button = 0;
+
+	system("cls");
 
 	cout << " Enter 1 to display result." << endl;
 	cout << " Enter 2 to send result in file." << endl;
@@ -142,17 +127,9 @@ void outMethod(Array& result)
 		cin >> path;
 		system("cls");
 
-		fout.open(path);
+		result.writeBinFile(path);
 
-		if (!fout.is_open())
-		{
-			cout << "Cannot open file to read!" << endl;
-			system("pause");
-			exit(1);
-		}
-
-		fout.write((char*)&result, sizeof(Array));
-		fout.close();
+		delete[]path;
 		break;
 	default:
 		cout << " Not valid data." << endl;
@@ -167,14 +144,12 @@ void createPositivEvenArray(Array& source, Array& newArray)
 	Array buffer1(1), buffer2(1);
 
 	copyArrayTo(buffer1, source, index);
-	findCorrespNumbers(newArray, buffer1, isEven);
-	deleteCorresp(buffer1, isEven);
+	buffer1.selection(newArray, isEven);
+	buffer1.screening(isEven);
 	copyArrayAfter(buffer2, source, index);
 	catArray(buffer1, buffer2);
 
 	source = buffer1;
-
-	system("cls");
 }
 
 void sortByNumberOfCharInHex(Array& source, Comparer comparator)
@@ -189,23 +164,25 @@ void sortByNumberOfCharInHex(Array& source, Comparer comparator)
 	}
 	else
 	{
-		mergeSort(source, keySymbolsInHex, comparator);
+		source.mergeSort(keySymbolsInHex, comparator);
 	}
 }
 
 void createKeysSymbolsInHex(Array& keys, Array& source)
 {
-	int count, length = source.getLength();
+	Array indices(1);
 	Array copySource = source;
-	Array buffer(length);
+	source.search(indices, isThereLetter);
+	int count, currentIndex;
 
-	for (int i = 0; i < length; ++i)
+	for (int i = 0; i < indices.getLength(); ++i)
 	{
 		count = 0;
+		currentIndex = indices[i];
 
-		while (copySource[i])
+		while (copySource[currentIndex])
 		{
-			abs(copySource[i]);
+			abs(copySource[currentIndex]);
 
 			if ((copySource[i] % 16) < 10)
 			{
@@ -217,25 +194,7 @@ void createKeysSymbolsInHex(Array& keys, Array& source)
 			++count;
 		}
 
-		buffer[i] = count;
-	}
-
-	keys = buffer;
-
-	system("cls");
-}
-
-void deleteRepits(Array& source)
-{
-	for (int i = 0, k = 0; i < source.getLength(); ++i)
-	{
-		for (int j = i + 1; j < source.getLength(); ++j)
-		{
-			if (source[i] == source[j])
-			{
-				deleteElement(source, j);
-			}
-		}
+		keys[currentIndex] = count;
 	}
 }
 
@@ -255,64 +214,6 @@ void catArray(Array& destination, Array& source)
 	}
 
 	destination = buffer;
-
-	system("cls");
-}
-
-void deleteCorresp(Array& source, Filter rule)
-{
-	int sourceLength = source.getLength(), newLength = 0;
-	Array buffer(sourceLength);
-
-	for (int i = 0, j = 0; i < sourceLength; ++i)
-	{
-		if (!rule(source[i]))
-		{
-			buffer[newLength] = source[i];
-			++newLength;
-		}
-	}
-
-	Array buffer2(newLength);
-
-	for (int i = 0; i < newLength; i++)
-	{
-		buffer2[i] = buffer[i];
-	}
-
-	source = buffer2;
-
-	system("cls");
-}
-
-void deleteElement(Array& source, int index)
-{
-	int length = source.getLength();
-
-	if (index >= length)
-	{
-		throw std::invalid_argument(" Index can't be more than source length !");
-	}
-
-	if (index < 0)
-	{
-		throw std::invalid_argument(" Index can't be less than zero length !");
-	}
-
-	Array buffer(length - 1);
-
-	for (int i = 0, j = 0; i < length; ++i)
-	{
-		if (i == index)
-		{
-			continue;
-		}
-
-		buffer[j] = source[i];
-		++j;
-	}
-
-	source = buffer;
 
 	system("cls");
 }
@@ -419,118 +320,7 @@ void quickSort(Array& source, Array& key, Comparer comparator)
 
 	int first = 0, last = source.getLength() - 1;
 
-	quickSort(source, key, first, last, comparator);
-}
-
-void quickSort(Array& source, Array& key, int first, int last, Comparer comparator)
-{
-	if (source.getLength() != key.getLength())
-	{
-		throw std::invalid_argument(" Keys do not match array!");
-	}
-
-	int f = first, l = last, mid = key[(f + l) / 2];
-
-	do
-	{
-		while (comparator(key[f], mid) > 0)
-		{
-			++f;
-		}
-		while (comparator(mid, key[l]) > 0)
-		{
-			--l;
-		}
-
-		if (f <= l)
-		{
-			swap(key[f], key[l]);
-			swap(source[f], source[l]);
-			++f;
-			--l;
-		}
-	} while (f < l);
-
-	if (first < l)
-	{
-		quickSort(source, key, first, l, comparator);
-	}
-	if (f < last)
-	{
-		quickSort(source, key, f, last, comparator);
-	}
-}
-
-void mergeSort(Array& source, Array& key, Comparer comparator)
-{
-	if (source.getLength() != key.getLength())
-	{
-		throw std::invalid_argument(" Keys do not match array!");
-	}
-
-	int length = source.getLength();
-	int mid = length / 2, h = 1;
-
-	if (length % 2 == 1)
-	{
-		mid++;
-	}
-
-	Array sourcesBuffer(length);
-	Array keysBuffer(length);
-	int step;
-
-	while (h < length)
-	{
-		step = h;
-		int i = 0;
-		int j = mid;
-		int k = 0;
-		while (step <= mid)
-		{
-			while ((i < step) && (j < length) && (j < (mid + step)))
-			{
-				if (comparator(key[i], key[j]) > 0)
-				{
-					keysBuffer[k] = key[i];
-					sourcesBuffer[k] = source[i];
-					i++;
-					k++;
-				}
-				else
-				{
-					keysBuffer[k] = key[j];
-					sourcesBuffer[k] = source[j];
-					j++;
-					k++;
-				}
-			}
-			while (i < step)
-			{
-				keysBuffer[k] = key[i];
-				sourcesBuffer[k] = source[i];
-				i++;
-				k++;
-			}
-			while ((j < (mid + step)) && (j < length))
-			{
-				keysBuffer[k] = key[j];
-				sourcesBuffer[k] = source[j];
-				j++;
-				k++;
-			}
-
-			step = step + h;
-		}
-
-		h = h * 2;
-
-		for (i = 0; i < length; i++)
-		{
-			key[i] = keysBuffer[i];
-			source[i] = sourcesBuffer[i];
-		}
-	}
+	source.quickSort(key, first, last, comparator);
 }
 
 bool isPositive(int number)
@@ -553,6 +343,20 @@ bool isNegativ(int number)
 	return !isPositive(number);
 }
 
+bool isThereLetter(int number)
+{
+	while (number)
+	{
+		if ((number % 16) >= 10 || (number % 16) < 16)
+		{
+			return true;
+		}
+
+		number /= 16;
+	}
+
+	return false;
+}
 int increase(int lho, int rho)
 {
 	return  rho - lho;
@@ -562,3 +366,4 @@ int decrease(int lho, int rho)
 {
 	return  lho - rho;
 }
+
