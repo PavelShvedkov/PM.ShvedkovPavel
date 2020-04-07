@@ -7,34 +7,23 @@ using namespace std;
 using namespace myArrays;
 
 
-
+void fillingMethod(Array&);
+void outMethod(Array&);
 void createPositivEvenArray(Array&, Array&);
 void sortByNumberOfCharInHex(Array&, Comparer);
 void createKeysSymbolsInHex(Array&, Array&);
-void createKeysIndRepits(Array&, Array&);
 void catArray(Array&, Array&);
-void deleteCorresp(Array&, Filter);
-void deleteRepits(Array&);
 void copyArrayAfter(Array&, Array&, int);
 void copyArrayTo(Array&, Array&, int);
-void findCorrespNumbers(Array&, Array&, Filter);
 void quickSort(Array&, Array&, Comparer);
-void mergeSort(Array&, Array&, Comparer);
-int findFirstCorrespNumber(Array&, Filter);
 bool isPositive(int);
 bool isEven(int);
 bool isPositivEven(int);
 bool isNegativ(int);
 bool isThereLetter(int);
+int findFirstCorrespNumber(Array&, Filter);
 int increase(int, int);
 int decrease(int, int);
-void fillingMethod(Array&);
-void outMethod(Array&);
-void readBinFile(const char*, Array&);
-void readTxtFile(const char*, Array&);
-void writeBinFile(const char*, Array&);
-void stringToArray(char*, Array&);
-
 
 
 int main()
@@ -53,7 +42,6 @@ int main()
 	buffer.writeBinFile(path);
 
 	fillingMethod(source);
-	source.display();
 	createPositivEvenArray(source, newArray);
 	sortByNumberOfCharInHex(source, decrease);
 	source.deleteRepits();
@@ -270,32 +258,6 @@ void copyArrayTo(Array& destination, Array& source, int index)
 	system("cls");
 }
 
-void findCorrespNumbers(Array& destination, Array& source, Filter rule)
-{
-	int sourceLength = source.getLength(), destLength = 0;
-	Array buffer(sourceLength);
-
-	for (int i = 0; i < sourceLength; ++i)
-	{
-		if (rule(source[i]))
-		{
-			buffer[destLength] = source[i];
-			++destLength;
-		}
-	}
-
-	Array buffer2(destLength);
-
-	for (int i = 0; i < destLength; ++i)
-	{
-		buffer2[i] = buffer[i];
-	}
-
-	destination = buffer2;
-
-	system("cls");
-}
-
 int findFirstCorrespNumber(Array& source, Filter rule)
 {
 	for (int i = 0; i < source.getLength(); ++i)
@@ -357,6 +319,7 @@ bool isThereLetter(int number)
 
 	return false;
 }
+
 int increase(int lho, int rho)
 {
 	return  rho - lho;
