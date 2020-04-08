@@ -192,3 +192,12 @@
 | -------- | -------- | --------| 
 | 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Task 12](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/IndividualTask25.03/IndividualTask.cpp)
 | [Headers](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-2/IndividualTask25.03)
+
+
+
+### 01.04.2020
+| Task | Task Status| Additional |
+| -------- | -------- | --------| 
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Word&Number](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork01.04/HW01.04.cpp)
+|
+
