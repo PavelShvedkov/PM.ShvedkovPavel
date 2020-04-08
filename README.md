@@ -199,5 +199,5 @@
 | Task | Task Status| Additional |
 | -------- | -------- | --------| 
 | 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Word&Number](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork01.04/HW01.04.cpp)
-|
+
 
