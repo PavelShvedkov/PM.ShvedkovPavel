@@ -205,7 +205,7 @@
 ### Individual task(08.04.2020)
 | Task | Task Status| Additional |
 | -------- | -------- | --------| 
-| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Variant 12](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/IndividualTask08.04/IndividualTask08.04.cpp)
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Variant 10](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/IndividualTask08.04/IndividualTask08.04.cpp)
 | [Header](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/IndividualTask08.04/WorkWithArrays.h)
 | [Proof for matrix 8x8](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/IndividualTask08.04/matrix(8x8).txt)
 | [Proof for matrix 4x4](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/IndividualTask08.04/matrix(4x4).txt)
