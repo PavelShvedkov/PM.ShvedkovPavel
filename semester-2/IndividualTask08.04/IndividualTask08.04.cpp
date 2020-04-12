@@ -5,9 +5,9 @@
 using namespace std;
 using namespace myArrays;
 
-typedef int(Scope)(int, int, int, int);
+typedef int*(Scope)(int**,int&, int, int, int);
 
-int* elementsInScope(int**, int&, int, int, int, Scope);
+int* elementsInScopeV12(int**, int&, int, int, int);
 int** scopingValuesMatrix(int**, int, Scope, Rule);
 int vision(int, int, int, int);
 
@@ -20,7 +20,7 @@ int main()
 	int edge = 0;
 
 	int** matrix = readSquareMatrix(edge, in);
-	int** resultMatrix = scopingValuesMatrix(matrix, edge, vision, decrease);
+	int** resultMatrix = scopingValuesMatrix(matrix, edge, elementsInScopeV12, increase);
 
 	out << endl;
 	
@@ -34,7 +34,7 @@ int main()
 }
 
 
-int* elementsInScope(int** matrix, int& sizeScope, int rows, int fixRow, int fixColumn, Scope scope)
+int* elementsInScopeV12(int** matrix, int& sizeScope, int rows, int fixRow, int fixColumn)
 {
 	if (fixRow > rows || fixRow < 0)
 	{
@@ -50,7 +50,7 @@ int* elementsInScope(int** matrix, int& sizeScope, int rows, int fixRow, int fix
 
 	for (int i = 0; i < rows; ++i)
 	{
-		for (int j = 0; j <= scope(rows, fixRow, fixColumn, i); j++)
+		for (int j = 0; j <= vision(rows, fixRow, fixColumn, i); j++)
 		{
 			buffer[sizeScope] = matrix[i][j];
 			++sizeScope;
@@ -73,7 +73,7 @@ int** scopingValuesMatrix(int** sourceMatrix, int edge, Scope scope, Rule rule)
 	{
 		for (int j = 0; j < edge; ++j, ++k)
 		{
-			int* currentScope = elementsInScope(sourceMatrix, sizeScope, edge, i, j, scope);
+			int* currentScope = scope(sourceMatrix, sizeScope, edge, i, j);
 			int elementIndex = elementPosition(currentScope, sizeScope, rule);
 			int currentElement = currentScope[elementIndex];
 			resultArray[k] = currentElement;
