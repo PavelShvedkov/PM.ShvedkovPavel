@@ -216,3 +216,10 @@
 | Task | Task Status| Additional |
 | -------- | -------- | --------| 
 | 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Big Integer](https://github.com/PavelShvedkov/PM.ShvedkovPavel/tree/master/semester-2/HomeWork15.04)
+
+
+
+### 22.04.2020
+| Task | Task Status| Additional |
+| -------- | -------- | --------| 
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Sort in binary stream](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork22.04/SortInBin.cpp)
