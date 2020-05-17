@@ -230,3 +230,10 @@
 | Task | Task Status| Additional |
 | -------- | -------- | --------| 
 | 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Linked list](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork29.04(LinkList)/LinkedList.h)
+
+
+
+### Individual Task(06.05.2020)
+| Task | Task Status| Additional |
+| -------- | -------- | --------| 
+| 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Variant 10](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/IndividualTask06.05(SymmMrx)/IndividualTask06.05.cpp)
