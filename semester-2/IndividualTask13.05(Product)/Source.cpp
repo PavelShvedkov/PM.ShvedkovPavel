@@ -9,29 +9,29 @@ using namespace std;
 typedef int(*Comparer)(Product&, Product&, bool);
 typedef long(*Key)(fstream&, Product&);
 
-void InitFile(char*);
-void DisplayFile(char*);
-void AddToEndFile(char*);
-void ChangeFile(char*);
+void initFile(char*);
+void displayFile(char*);
+void addToEndFile(char*);
+void changeFile(char*);
 int typeOfRemove();
-void RemoveFromFile(char*);
+void removeFromFile(char*);
 long patternPosition(fstream&, Product&);
-void InitNumber(long&);
-void SystemFun();
-void InitNameFile(char*);
-int TypeOfSort();
-void SortingFile(char*);
-int SortByName(const char*, const char*, bool);
-int SortByDate(Date, Date, bool);
-int SortByGrade(Product&, Product&, bool);
-int SortByProductName(Product&, Product&, bool);
-int SortByDateOfIssue(Product&, Product&, bool);
-int SortByShelfLife(Product&, Product&, bool);
-int SortByCost(Product&, Product&, bool);
+void initNumber(long&);
+void systemFun();
+void initNameFile(char*);
+int typeOfSort();
+void sortingFile(char*);
+int sortByName(const char*, const char*, bool);
+int sortByDate(Date, Date, bool);
+int sortByGrade(Product&, Product&, bool);
+int sortByProductName(Product&, Product&, bool);
+int sortByDateOfIssue(Product&, Product&, bool);
+int sortByShelfLife(Product&, Product&, bool);
+int sortByCost(Product&, Product&, bool);
 char toUpper(char);
 bool isAlphabet(char);
 bool isLower(char);
-int Menu();
+int menu();
 
 int main()
 {
@@ -39,112 +39,112 @@ int main()
 	enum { Init = 1, Create, Display, Add, Change, Remove, Sort, Exit };
 	while (true)
 	{
-		int Key = Menu();
-		if (Key == Exit)
+		int key = menu();
+		if (key == Exit)
 			return 0;
 		system("cls");
-		switch (Key)
+		switch (key)
 		{
 		case Init:
-			InitNameFile(fileName);
-			SystemFun();
+			initNameFile(fileName);
+			systemFun();
 			break;
 		case Create:
-			InitFile(fileName);
-			SystemFun();
+			initFile(fileName);
+			systemFun();
 			break;
 		case Display:
-			DisplayFile(fileName);
-			SystemFun();
+			displayFile(fileName);
+			systemFun();
 			break;
 		case Add:
-			AddToEndFile(fileName);
-			SystemFun();
+			addToEndFile(fileName);
+			systemFun();
 			break;
 		case Change:
-			ChangeFile(fileName);
-			SystemFun();
+			changeFile(fileName);
+			systemFun();
 			break;
 		case Remove:
-			RemoveFromFile(fileName);
-			SystemFun();
+			removeFromFile(fileName);
+			systemFun();
 			break;
 		case Sort:
-			SortingFile(fileName);
-			SystemFun();
+			sortingFile(fileName);
+			systemFun();
 			break;
 		default:
 			cout << "\nIncorrect input! Try again!";
-			SystemFun();
+			systemFun();
 		}
 	}
 }
 
-void InitFile(char* fileName)
+void initFile(char* fileName)
 {
 	ofstream streamOut;
 	streamOut.open(fileName, ios::binary);
 	if (!streamOut.is_open())
 	{
 		cout << "\nCan't open file to write!";
-		SystemFun();
+		systemFun();
 		return;
 	}
 	int bufSize = sizeof(Product);
 	Product merch;
-	char Ok = 'y';
-	while (Ok == 'y')
+	char ok = 'y';
+	while (ok == 'y')
 	{
 		//man->EnterStudent();
 		merch.enterProduct();//
 		//streamOut.write((char*)man,bufSize);
 		streamOut.write((char*)&merch, bufSize);
 		cout << " If do you want to continue, press 'y' :";
-		cin >> Ok;
+		cin >> ok;
 	}
 	//delete man;
 	streamOut.close();
 }
-void AddToEndFile(char* fileName)
+void addToEndFile(char* fileName)
 {
 	ofstream streamOut(fileName, ios::app | ios::binary);
 	if (!streamOut.is_open())
 	{
 		cout << "Can't open file to write!";
-		SystemFun();
+		systemFun();
 		return;
 	}
 	int bufSize = sizeof(Product);
 	Product merch;
-	char Ok = 'y';
-	while (Ok == 'y')
+	char ok = 'y';
+	while(ok == 'y')
 	{
 		merch.enterProduct();
 		streamOut.write((char*)&merch, bufSize);
 		cout << " If do you want to continue, press 'y' : ";
-		cin >> Ok;
+		cin >> ok;
 	}
 	streamOut.close();
 }
-void ChangeFile(char* fileName)
+void changeFile(char* fileName)
 {
 	fstream streamInOut(fileName, ios::in | ios::out | ios::binary);
 	if (!streamInOut)
 	{
 		cout << "Can't open file to read and write!";
-		SystemFun();
+		systemFun();
 		return;
 	}
 	int bufSize = sizeof(Product);
 	Product merch;
-	long Position;
-	InitNumber(Position);
-	streamInOut.seekp((Position - 1) * bufSize, ios::beg);
+	long position;
+	initNumber(position);
+	streamInOut.seekp((position - 1) * bufSize, ios::beg);
 	merch.enterProduct();
 	streamInOut.write((char*)&merch, bufSize);
 	streamInOut.close();
 }
-void RemoveFromFile(char* fileName)
+void removeFromFile(char* fileName)
 {
 	int mode = typeOfRemove();
 	Key key;
@@ -162,7 +162,7 @@ void RemoveFromFile(char* fileName)
 	if (!streamInOut.is_open())
 	{
 		cout << "Can't open file to read and write!";
-		SystemFun();
+		systemFun();
 		return;
 	}
 	streamInOut.seekp(0, ios::end);
@@ -216,26 +216,26 @@ long patternPosition(fstream& stream, Product& pattern)
 	}
 	return -1;
 }
-void SortingFile(char* fileName)
+void sortingFile(char* fileName)
 {
-	int mode = TypeOfSort();
+	int mode = typeOfSort();
 	Comparer comparer;
 	switch (mode)
 	{
 	case 1:
-		comparer = SortByProductName;
+		comparer = sortByProductName;
 		break;
 	case 2:
-		comparer = SortByGrade;
+		comparer = sortByGrade;
 		break;
 	case 3:
-		comparer = SortByDateOfIssue;
+		comparer = sortByDateOfIssue;
 		break;
 	case 4:
-		comparer = SortByShelfLife;
+		comparer = sortByShelfLife;
 		break;
 	case 5:
-		comparer = SortByCost;
+		comparer = sortByCost;
 		break;
 	default:
 		cout << "\nIncorrect input!";
@@ -249,7 +249,7 @@ void SortingFile(char* fileName)
 		if (!streamInOut.is_open())
 		{
 			cout << "Can't open file to read and write!";
-			SystemFun();
+			systemFun();
 			return;
 		}
 		flag = false;
@@ -272,13 +272,13 @@ void SortingFile(char* fileName)
 		streamInOut.close();
 	}
 }
-void DisplayFile(char* fileName)
+void displayFile(char* fileName)
 {
 	ifstream streamIn(fileName, ios::binary);
 	if (!streamIn.is_open())
 	{
 		cout << "Can't open file to read!";
-		SystemFun();
+		systemFun();
 		return;
 	}
 	int bufSize = sizeof(Product);
@@ -289,26 +289,26 @@ void DisplayFile(char* fileName)
 	}
 	streamIn.close();
 }
-void InitNumber(long& n)
+void initNumber(long& n)
 {
 	cout << "Enter the number of record:" << endl;
 	cin >> n;
 	system("cls");
 }
-void SystemFun()
+void systemFun()
 {
 	cout << endl;
 	system("pause");
 	system("cls");
 }
-void InitNameFile(char* fileName)
+void initNameFile(char* fileName)
 {
 	cout << "Enter the name of file: " << endl;
 	cin.ignore();
 	cin.getline(fileName, 256, '\n');
 	system("cls");
 }
-int Menu()
+int menu()
 {
 	int k;
 	cout << "\n Enter the number - the mode of operations with file:"
@@ -323,7 +323,7 @@ int Menu()
 	cin >> k;
 	return k;
 }
-int TypeOfSort()
+int typeOfSort()
 {
 	int k;
 	cout << "\n Enter number - file sort mode:"
@@ -335,7 +335,7 @@ int TypeOfSort()
 	cin >> k;
 	return k;
 }
-int SortByDate(Date lhs, Date rhs, bool option)
+int sortByDate(Date lhs, Date rhs, bool option)
 {
 	if (option)
 	{
@@ -358,23 +358,23 @@ int SortByDate(Date lhs, Date rhs, bool option)
 		return (lhs.getYear() - rhs.getYear());
 	}
 }
-int SortByDateOfIssue(Product& lhs, Product& rhs, bool option)
+int sortByDateOfIssue(Product& lhs, Product& rhs, bool option)
 {
 	Date lhd = lhs.getDateOfIssue(), rhd = rhs.getDateOfIssue();
 
-	return SortByDate(lhd, rhd, option);
+	return sortByDate(lhd, rhd, option);
 }
-int SortByShelfLife(Product& lhs, Product& rhs, bool option)
+int sortByShelfLife(Product& lhs, Product& rhs, bool option)
 {
 	Date lhd = lhs.getShelfLife(), rhd = rhs.getShelfLife();
 
-	return SortByDate(lhd, rhd, option);
+	return sortByDate(lhd, rhd, option);
 }
-int SortByCost(Product& lhs, Product& rhs, bool option)
+int sortByCost(Product& lhs, Product& rhs, bool option)
 {
 	return lhs.getCost() - rhs.getCost();
 }
-int SortByName(const char* lhs, const char* rhs, bool ordinal)
+int sortByName(const char* lhs, const char* rhs, bool ordinal)
 {
 	if (lhs == nullptr)
 	{
@@ -416,19 +416,19 @@ int SortByName(const char* lhs, const char* rhs, bool ordinal)
 		return 0;
 	}
 }
-int SortByGrade(Product& merchOne, Product& merchTwo, bool ordinal)
+int sortByGrade(Product& merchOne, Product& merchTwo, bool ordinal)
 {
 	const char* lhs = merchOne.getGrade();
 	const char* rhs = merchTwo.getGrade();
 
-	return SortByName(lhs, rhs, ordinal);
+	return sortByName(lhs, rhs, ordinal);
 }
-int SortByProductName(Product& merchOne, Product& merchTwo, bool ordinal)
+int sortByProductName(Product& merchOne, Product& merchTwo, bool ordinal)
 {
 	const char* lhs = merchOne.getProductName();
 	const char* rhs = merchTwo.getProductName();
 
-	return SortByName(lhs, rhs, ordinal);
+	return sortByName(lhs, rhs, ordinal);
 }
 char toUpper(char symbol)
 {
