@@ -244,3 +244,19 @@
 | Task | Task Status| Additional |
 | -------- | -------- | --------| 
 | 1 | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[Variant 10](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/IndividualTask13.05(Product)/Product.h)
+
+
+
+### 20.05.2020
+| Task | Task Status| Additional |
+| -------- | -------- | --------| 
+| Main .cpp | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[
+Search for words in a text file](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork20.05(Search%20words%20in%20txt%20file)/CW20.05(TextNWords).cpp)
+| Class W&N .h | !![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[
+Word and Number]https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork20.05(Search%20words%20in%20txt%20file)/WordNumber.cpp)
+| "War and peace" | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[
+First 3 parts](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork20.05(Search%20words%20in%20txt%20file)/WarAndPeace.txt)
+| Word list | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[
+](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork20.05(Search%20words%20in%20txt%20file)/WordsInWNP.txt)
+| Result file | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|[ binary proof
+First 3 parts](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork20.05(Search%20words%20in%20txt%20file)/result.txt)
