@@ -260,3 +260,17 @@
 [ My list ](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork20.05(Search%20words%20in%20txt%20file)/WordsInWNP.txt)
 | Result file | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|
 [ Binary proof ](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-2/HomeWork20.05(Search%20words%20in%20txt%20file)/result.txt)
+
+
+
+## 3 семестр
+
+
+
+### 05.09.2020
+| Task | Task Status| Additional |
+| -------- | -------- | --------| 
+| Class worker | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|
+[main.cpp](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-3/ClassWorker05.09/CW05.09.cpp)
+| Class worker | ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-ok.png)|
+[Worker.h](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-3/ClassWorker05.09/Worker.h)
