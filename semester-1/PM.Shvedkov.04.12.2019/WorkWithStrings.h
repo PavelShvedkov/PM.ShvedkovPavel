@@ -9,7 +9,7 @@ bool equivalenceStrings(char*, char*);
 bool areEqual(char*, char*);
 int compressionStrings(char*, char*);
 int searchFirstSubstringIndex(char*, char*, bool = true);
-int getLenght(const char*);
+int getLength(const char*);
 int compare(const char*, const char*, bool = true);
 int enterenceSymbolInString(char*, char);
 char** createList(char[], int&);
@@ -24,7 +24,7 @@ void deleteMemory(char*);
 void displayList(char**, int);
 void alphabetBubleSortList(char**, int);
 void alphabetInsertSortList(char**, int);
-void lenghtSortList(char**, int);
+void lengthSortList(char**, int);
 void symbolEnterenceSortList(char**, int, char);
 void searchFirstBeginEndSubstring(char*, char*, int&, int&, bool = true);
 void copyStringTo(char*, const char*, int);
@@ -32,7 +32,7 @@ void copyStringAfter(char*, const char*, int);
 
 char* associationStrings(char* lps, char* rps)
 {
-	char* buffer = new char[(getLenght(lps) + getLenght(rps)) + 10];
+	char* buffer = new char[(getLength(lps) + getLength(rps)) + 10];
 	int k = 0;
 
 	for (int i = 0; lps[i] > 0; k++, i++)
@@ -65,16 +65,16 @@ void copyStringTo(char* target, const char* source, int end)
 		throw std::invalid_argument(" String can't be null");
 	}
 
-	int targetLenght = getLenght(target);
+	int targetLength = getLength(target);
 
-	int sourceLenght = getLenght(source);
+	int sourceLength = getLength(source);
 
-	if (targetLenght < sourceLenght)
+	if (targetLength < sourceLength)
 	{
-		throw std::invalid_argument("Lenght destination string!");
+		throw std::invalid_argument("Length destination string!");
 	}
 
-	int i = 0, n = getLenght(target);
+	int i = 0, n = getLength(target);
 
 	for (int i = 0; i < n; i++)
 	{
@@ -90,7 +90,7 @@ void copyStringTo(char* target, const char* source, int end)
 
 void copyStringAfter(char* target, const char* source, int begin)
 {
-	if (begin > getLenght(source))
+	if (begin > getLength(source))
 	{
 		throw std::invalid_argument(" Out of line!");
 	}
@@ -105,16 +105,16 @@ void copyStringAfter(char* target, const char* source, int begin)
 		throw std::invalid_argument(" String can't be null");
 	}
 
-	int targetLenght = getLenght(target);
+	int targetLength = getLength(target);
 
-	int sourceLenght = getLenght(source);
+	int sourceLength = getLength(source);
 
-	if (targetLenght < sourceLenght)
+	if (targetLength < sourceLength)
 	{
-		throw std::invalid_argument("Lenght destination string!");
+		throw std::invalid_argument("Length destination string!");
 	}
 
-	int i = 0, n = getLenght(target);
+	int i = 0, n = getLength(target);
 
 	for (int i = 0; i < n; i++)
 	{
@@ -133,7 +133,7 @@ void searchFirstBeginEndSubstring(char* string, char* subString, int& begin, int
 	if (searchFirstSubstringIndex(string, subString, caseSensitive) != -1)
 	{
 		begin = searchFirstSubstringIndex(string, subString);
-		end = getLenght(subString) + begin;
+		end = getLength(subString) + begin;
 	}
 }
 
@@ -154,13 +154,13 @@ void symbolEnterenceSortList(char** list, int k, char symbol)
 	}
 }
 
-void lenghtSortList(char** list, int k)
+void lengthSortList(char** list, int k)
 {
 	for (int i = 0; i < k - 1; i++)
 	{
 		for (int j = i; j >= 0; j--)
 		{
-			if (getLenght(list[j]) < getLenght(list[j + 1]))
+			if (getLength(list[j]) < getLength(list[j + 1]))
 			{
 				swap(list[j], list[j + 1]);
 				continue;
@@ -214,7 +214,7 @@ int enterenceSymbolInString(char* string, char symbol)
 {
 	int j = 0;
 
-	for (int i = 0; i < getLenght(string); i++)
+	for (int i = 0; i < getLength(string); i++)
 	{
 		if (string[i] == symbol)
 		{
@@ -322,7 +322,7 @@ bool areEqual(char* lhs, char* rhs)
 		throw std::invalid_argument(" String can't be null!");
 	}
 
-	if (getLenght(lhs) != getLenght(rhs))
+	if (getLength(lhs) != getLength(rhs))
 	{
 		return false;
 	}
@@ -405,9 +405,9 @@ char* createString(const char* source)
 		throw std::invalid_argument(" String can't be null");
 	}
 
-	int lenght = getLenght(source) + 1;
+	int Length = getLength(source) + 1;
 
-	char* target = new char[lenght];
+	char* target = new char[length];
 
 	int i = 0;
 
@@ -434,16 +434,16 @@ void copyString(char* target, const char* source)
 		throw std::invalid_argument(" String can't be null");
 	}
 
-	int targetLenght = getLenght(target);
+	int targetLength = getLength(target);
 
-	int sourceLenght = getLenght(source);
+	int sourceLength = getLength(source);
 
-	if (targetLenght < sourceLenght)
+	if (targetLength < sourceLength)
 	{
-		throw std::invalid_argument("Lenght destination string!");
+		throw std::invalid_argument("Length destination string!");
 	}
 
-	int i = 0, n = getLenght(target);
+	int i = 0, n = getLength(target);
 
 	for (int i = 0; i < n; i++)
 	{
@@ -469,11 +469,11 @@ int compare(const char* lhs, const char* rhs, bool ordinal)
 		throw std::invalid_argument(" String can't be null");
 	}
 
-	int lhsLenght = getLenght(lhs);
+	int lhsLength = getLength(lhs);
 
-	int rhsLenght = getLenght(rhs);
+	int rhsLength = getLength(rhs);
 
-	for (int i = 0; i <= lhsLenght || i <= rhsLenght; i++)
+	for (int i = 0; i <= lhsLength || i <= rhsLength; i++)
 	{
 		char lHelper = ordinal ? lhs[i] : toUpper(lhs[i]);
 		char rHelper = ordinal ? rhs[i] : toUpper(rhs[i]);
@@ -494,7 +494,7 @@ int compare(const char* lhs, const char* rhs, bool ordinal)
 		}
 	}
 
-	if (lhsLenght == rhsLenght)
+	if (lhsLength == rhsLength)
 	{
 		return 0;
 	}
@@ -503,10 +503,10 @@ int compare(const char* lhs, const char* rhs, bool ordinal)
 int searchFirstSubstringIndex(char* string, char* subString, bool caseSensitive)
 {
 	int index = -1, midind = 0;
-	int lenght = getLenght(string);
-	int lenghtSubString = getLenght(subString);
+	int Length = getLength(string);
+	int lengthSubString = getLength(subString);
 
-	for (int i = 0; i < lenght; i++)
+	for (int i = 0; i < length; i++)
 	{
 		switch (caseSensitive)
 		{
@@ -526,7 +526,7 @@ int searchFirstSubstringIndex(char* string, char* subString, bool caseSensitive)
 			{
 				midind = i;
 
-				for (int k = 0; k < lenghtSubString; k++, i++)
+				for (int k = 0; k < lengthSubString; k++, i++)
 				{
 					switch (caseSensitive)
 					{
@@ -543,7 +543,7 @@ int searchFirstSubstringIndex(char* string, char* subString, bool caseSensitive)
 					case 1:
 						if (subString[k] == string[i])
 						{
-							if (k == lenghtSubString - 1)
+							if (k == lengthSubString - 1)
 							{
 								return index;
 							}
@@ -563,21 +563,21 @@ int searchFirstSubstringIndex(char* string, char* subString, bool caseSensitive)
 	return index;
 }
 
-int getLenght(const char* source)
+int getLength(const char* source)
 {
 	if (source == nullptr)
 	{
 		throw std::invalid_argument(" String can't be null");
 	}
 
-	int lenght = 0;
+	int length = 0;
 
-	while (source[lenght])
+	while (source[length])
 	{
-		lenght++;
+		length++;
 	}
 
-	return lenght;
+	return length;
 }
 
 bool equivalenceStrings(char* string1, char* string2)
@@ -585,7 +585,7 @@ bool equivalenceStrings(char* string1, char* string2)
 	int i = 0;
 	int j = 0;
 
-	if (getLenght(string1) == getLenght(string2))
+	if (getLength(string1) == getLength(string2))
 	{
 		return true;
 	}
@@ -597,12 +597,12 @@ int compressionStrings(char* string1, char* string2)
 {
 	int answer = 1;
 
-	if (getLenght(string1) < getLenght(string2))
+	if (getLength(string1) < getLength(string2))
 	{
 		answer = 2;
 	}
 
-	if (getLenght(string1) > getLenght(string2))
+	if (getLength(string1) > getLength(string2))
 	{
 		answer = 3;
 	}

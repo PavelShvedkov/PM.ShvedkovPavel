@@ -1,0 +1,7 @@
+﻿  LabGraph.cpp
+C:\Users\pashk\source\repos\Lab3Task1A\Lab3Task1A\LabGraph.h(202,74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\pashk\source\repos\Lab3Task1A\Lab3Task1A\LabGraph.h(202,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\pashk\source\repos\Lab3Task1A\Lab3Task1A\LabGraph.h(203,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\pashk\source\repos\Lab3Task1A\Lab3Task1A\LabGraph.cpp(8,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  LabGraph.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Lab3Task1A.vcxproj -> C:\Users\pashk\source\repos\Lab3Task1A\Debug\Lab3Task1A.exe

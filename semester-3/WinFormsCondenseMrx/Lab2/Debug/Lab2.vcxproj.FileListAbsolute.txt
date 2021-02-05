@@ -1,0 +1,6 @@
+C:\Users\pashk\source\repos\Lab2\Lab2\Debug\Lab2.vcxprojAssemblyReference.cache
+C:\Users\pashk\source\repos\Lab2\Lab2\Debug\Lab2.Lab2.resources
+C:\Users\pashk\source\repos\Lab2\Lab2\Debug\Lab2.vcxproj.GenerateResource.cache
+C:\Users\pashk\Documents\GitHub\PM ShvedkovPavel\semester-3\Lab2\Lab2\Debug\Lab2.vcxprojAssemblyReference.cache
+C:\Users\pashk\Documents\GitHub\PM ShvedkovPavel\semester-3\Lab2\Lab2\Debug\Lab2.Lab2.resources
+C:\Users\pashk\Documents\GitHub\PM ShvedkovPavel\semester-3\Lab2\Lab2\Debug\Lab2.vcxproj.GenerateResource.cache

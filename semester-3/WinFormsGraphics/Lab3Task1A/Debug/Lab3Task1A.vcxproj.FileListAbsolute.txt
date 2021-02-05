@@ -1,0 +1,3 @@
+C:\Users\pashk\source\repos\Lab3Task1A\Lab3Task1A\Debug\Lab3Task1A.vcxprojAssemblyReference.cache
+C:\Users\pashk\source\repos\Lab3Task1A\Lab3Task1A\Debug\Lab3Task1A.LabGraph.resources
+C:\Users\pashk\source\repos\Lab3Task1A\Lab3Task1A\Debug\Lab3Task1A.vcxproj.GenerateResource.cache

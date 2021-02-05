@@ -1,0 +1,7 @@
+﻿  Lab2.cpp
+C:\Users\pashk\Documents\GitHub\PM ShvedkovPavel\semester-3\Lab2\Lab2\Lab2.h(274,14): warning C4101: 't': unreferenced local variable
+C:\Users\pashk\Documents\GitHub\PM ShvedkovPavel\semester-3\Lab2\Lab2\Lab2.cpp(7,32): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  .NETFramework,Version=v4.6.2.AssemblyAttributes.cpp
+  Generating Code...
+  Lab2.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Lab2.vcxproj -> C:\Users\pashk\Documents\GitHub\PM ShvedkovPavel\semester-3\Lab2\Debug\Lab2.exe
