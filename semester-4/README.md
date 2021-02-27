@@ -13,7 +13,7 @@
 ### **.02.2021
 | Task | Task Status| Additional |
 | -------- | -------- | --------| 
-| Class string of bits| ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)|
+| Class string of bits| ![Scheduled](https://github.com/AnzhelikaKravchuk/.NET-Training.-Spring-2019/blob/master/Pictures/icons-inprogress.png)
 [SquareMatrix.java](https://github.com/PavelShvedkov/PM.ShvedkovPavel/blob/master/semester-4/Lab2Task3(determinant)/SquareMatrix.java)
 
 
