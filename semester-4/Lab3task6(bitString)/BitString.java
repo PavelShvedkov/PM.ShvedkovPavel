@@ -1,7 +1,5 @@
 package com.company;
 
-import java.security.PublicKey;
-import java.util.prefs.PreferenceChangeListener;
 
 public class BitString extends MyString{
 public BitString(){
