@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="769935b4-8d00-4836-9750-feda5ea581f0" name="Default Changelist" comment="" />
+    <list default="true" id="769935b4-8d00-4836-9750-feda5ea581f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/by/bsu/lab5task2/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/bsu/lab5task2/Main/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +16,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -23,6 +28,7 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1qHUvzM8VhzoKQNblXodxxc0NtI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -69,6 +75,7 @@
       <updated>1616736245602</updated>
       <workItem from="1616736246801" duration="5262000" />
       <workItem from="1616742615564" duration="385000" />
+      <workItem from="1616821969112" duration="20000" />
     </task>
     <servers />
   </component>

@@ -18,7 +18,6 @@ public static void main(String[] args) {
         String data = reader.readTextFromFile("data/Text.txt");
         data=editor.editCode(data,"public","private");
       writer.WriteTextInFile(data,"data/Text.txt");
-       // textOut.writeTextInConsole( app.removePartBetweenSymbols(data,'@'));
     } catch (FileNotFoundException e){
         e.printStackTrace();
     }
